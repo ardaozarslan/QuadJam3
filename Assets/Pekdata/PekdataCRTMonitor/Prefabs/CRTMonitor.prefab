@@ -5190,7 +5190,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0e0622fb07075ea95a4cb399d7480df4, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10073,7 +10072,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 053af3786800a59bcbf0d5c44d17152a, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10290,7 +10288,6 @@ MonoBehaviour:
   screenExplosionParticleSystem: {fileID: 1933960111588844}
   screenOff: {fileID: 1503309550545730}
   screenOn: {fileID: 1301780834733650}
-  shards: {fileID: 1279047784018206}
 --- !u!1 &1709236654553450
 GameObject:
   m_ObjectHideFlags: 0
@@ -15123,7 +15120,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 053af3786800a59bcbf0d5c44d17152a, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20216,7 +20212,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 9a212a8d989e5da86a69eef17894142c, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -7,7 +7,9 @@ public class PCPlayer : MonoBehaviour
 {
 	public PlayerActionControls controls;
 	private Rigidbody2D rb;
-		private InputManager inputManager;
+	private InputManager inputManager;
+
+	public PC pc;
 
 	private void Awake()
 	{
@@ -27,7 +29,7 @@ public class PCPlayer : MonoBehaviour
 	{
 		// Debug.Log("Movement: " + controls.PC1Player.Movement.ReadValue<Vector2>());
 
-		Vector2 inputVector = controls.PC1Player.Movement.ReadValue<Vector2>();
+		Vector2 inputVector = controls.FindAction($"{pc.actionMapName}Movement").ReadValue<Vector2>();
 		float speed = 1f;
 		float newVelocityX = Mathf.Lerp(rb.velocity.x, inputVector.x * speed, 10f * Time.deltaTime);
 		float newVelocityY = Mathf.Lerp(rb.velocity.y, inputVector.y * speed, 10f * Time.deltaTime);

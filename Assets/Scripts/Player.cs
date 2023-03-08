@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
 	public PlayerActionControls controls;
 	private Rigidbody rb;
@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
 		controls = InputManager.Instance.controls;
 		rb = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator>();
+		animator.SetFloat("moveDirection", 1f);
 		rb.freezeRotation = true;
 		inputManager = InputManager.Instance;
 		movementState = MovementState.Idle;
@@ -50,14 +51,16 @@ public class Player : MonoBehaviour
 
 	private void OnEnable()
 	{
-		controls.Player.Sprint.started += SprintAction;
-		controls.Player.Sprint.canceled += SprintAction;
+		controls.Player.PlayerSprint.started += SprintAction;
+		controls.Player.PlayerSprint.canceled += SprintAction;
+		controls.Player.PlayerInteract.performed += InteractAction;
 	}
 
 	private void OnDisable()
 	{
-		controls.Player.Sprint.started -= SprintAction;
-		controls.Player.Sprint.canceled -= SprintAction;
+		controls.Player.PlayerSprint.started -= SprintAction;
+		controls.Player.PlayerSprint.canceled -= SprintAction;
+		controls.Player.PlayerInteract.performed -= InteractAction;
 	}
 
 	private void SprintAction(InputAction.CallbackContext context)
@@ -79,6 +82,31 @@ public class Player : MonoBehaviour
 		}
 	}
 
+
+	private void InteractAction(InputAction.CallbackContext context)
+	{
+		if (context.performed)
+		{
+			// shoot raycast
+			RaycastHit hit;
+			int layerMask = 1 << 8;
+			// shoot a raycast that only hits colliders with the "Interactable" layer and also ignore triggers
+			if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, 3f, layerMask, QueryTriggerInteraction.Collide))
+			{
+				Debug.Log("Hit " + hit.collider.name);
+				// get the interactable component from the object we hit
+				Interactable interactable = hit.collider.GetComponent<Interactable>();
+				// if the object we hit has an interactable component, call the interact method
+				if (interactable != null)
+				{
+					interactable.Interact();
+				}
+			}
+
+
+		}
+	}
+
 	void Start()
 	{
 
@@ -87,7 +115,7 @@ public class Player : MonoBehaviour
 
 	private void Movement()
 	{
-		Vector2 inputVector = controls.Player.Movement.ReadValue<Vector2>();
+		Vector2 inputVector = controls.Player.PlayerMovement.ReadValue<Vector2>();
 
 		if (inputVector != Vector2.zero && movementState != MovementState.Sprinting)
 		{
@@ -98,6 +126,14 @@ public class Player : MonoBehaviour
 		moveDirection = rootObject.forward * inputVector.y + rootObject.right * inputVector.x;
 		moveDirection.y = 0;
 		moveDirection.Normalize();
+		if (moveDirection.z < 0)
+		{
+			animator.SetFloat("moveDirection", -1f);
+		}
+		else
+		{
+			animator.SetFloat("moveDirection", 1f);
+		}
 		movementInputValue = inputVector.magnitude;
 
 		float newVelocityX = Mathf.Lerp(rb.velocity.x, moveDirection.x * moveSpeed, 10f * Time.deltaTime);
@@ -108,7 +144,7 @@ public class Player : MonoBehaviour
 
 	private void Look()
 	{
-		Vector2 inputVector = controls.Player.Look.ReadValue<Vector2>();
+		Vector2 inputVector = controls.Player.PlayerLook.ReadValue<Vector2>();
 
 		yRotation += inputVector.x * sensX * Time.deltaTime;
 		xRotation -= inputVector.y * sensY * Time.deltaTime;
@@ -136,8 +172,6 @@ public class Player : MonoBehaviour
 			{
 				animator.SetBool("isWalking", true);
 				animator.SetBool("isSprinting", false);
-				Debug.Log("animator.GetBool(\"isWalking\"): " + animator.GetBool("isWalking"));
-				Debug.Log("animator.GetBool(\"isSprinting\"): " + animator.GetBool("isSprinting"));
 			}
 		}
 		else

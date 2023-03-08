@@ -28,13 +28,22 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
             ""id"": ""9a165b96-0998-42e4-b56d-2fc0cc6c06c8"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""PC1PlayerMovement"",
                     ""type"": ""Value"",
                     ""id"": ""1da9de5d-dfb4-456a-86dd-da558ad4a4ad"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PC1PlayerExit"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7afc59e-bef8-4858-8cc8-c6704164bd3d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -45,7 +54,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PC1PlayerMovement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -56,7 +65,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PC1PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -67,7 +76,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PC1PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -78,7 +87,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PC1PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -89,9 +98,388 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PC1PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04b57abd-5e0a-46cd-be2c-bcbd1d049bdb"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC1PlayerExit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PC2Player"",
+            ""id"": ""8b6a6443-2dd3-438e-9ad2-106ba53809ce"",
+            ""actions"": [
+                {
+                    ""name"": ""PC2PlayerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""c3d26c4f-a017-4548-a60b-9104fcb62af9"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PC2PlayerExit"",
+                    ""type"": ""Button"",
+                    ""id"": ""835e28a5-9a5b-439c-b973-68a7f09b1ade"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""e8d78827-5ea2-4ae2-97c3-ebfbd9a182fd"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""d1f422b7-9d14-469c-85f8-8a1edf363fea"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""e6d17a8d-d65e-4405-a1d2-945056cf9392"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a3b9558e-104f-4a8a-a802-1fdc5cea8fd2"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""5b5fdd56-900d-4425-9371-5c3035f2f698"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f60dea4-1aa2-4748-9010-c17cf1981fef"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerExit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PC3Player"",
+            ""id"": ""bf20d011-43cc-43dd-a708-effec82dede0"",
+            ""actions"": [
+                {
+                    ""name"": ""PC3PlayerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""a22653cd-154b-4fc1-8c55-6656cc6de1ea"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PC3PlayerExit"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a138063-39aa-47f9-ab1c-fc654c09a6b2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""c0f5ed91-f395-4052-93be-805a35570d2e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""58728744-9159-4dcf-a91e-1c30871a5c73"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""27b1cb66-c6f4-446a-8859-fefc9be7589b"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""c7514b56-a7be-42a8-969a-c4d014c5062b"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""161a7983-9b3d-4caa-a37e-73def744c529"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""174846c2-1f5c-40e6-aec1-3610aaaaae58"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerExit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PC4Player"",
+            ""id"": ""20ffd174-85fc-496e-ae76-2d033731c7cd"",
+            ""actions"": [
+                {
+                    ""name"": ""PC4PlayerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""1c5ff82f-16ac-46e8-a4d8-5b667f242395"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PC4PlayerExit"",
+                    ""type"": ""Button"",
+                    ""id"": ""c92211a9-f687-42da-8680-8d21278a4436"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""1842ab7c-caa1-4ff9-91db-baf4a40dcd7f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c3253679-8413-4a46-aaf6-61f5124f8275"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0ecf0700-88e9-47f3-bd49-922378a32f1f"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""dd309c1e-8560-449e-9426-abca4eae1174"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""048c2a85-8edf-48d1-8b1e-cdc8eaa6aff1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2981d04b-7499-44b8-9847-d865089476be"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerExit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PC5Player"",
+            ""id"": ""e14bc196-dd45-4412-ab28-0e391c364072"",
+            ""actions"": [
+                {
+                    ""name"": ""PC5PlayerMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""cb286934-0a7d-41bc-aa14-ef1f769df8ad"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PC5PlayerExit"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e1f3dbd-6114-484c-b966-d46ad0e5a339"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""739bcbf6-f5a0-49f3-abb3-401856c2de95"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""24feedb1-f24d-47fd-92d6-c132bd23c076"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""13b44fea-51fa-4a40-a94a-5653b388e284"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b325eaf9-1f19-49a3-abb8-a82f27ace5c9"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""41e3264e-cda5-4600-9c27-2032ceb4bda6"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9ff5f54-e95f-4e09-97f8-8ffa62a82b59"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerExit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -100,7 +488,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
             ""id"": ""ed4df371-69c5-438d-b07b-ddc53d2c0492"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""PlayerMovement"",
                     ""type"": ""Value"",
                     ""id"": ""586d747c-8863-4d73-8106-938f146b52e3"",
                     ""expectedControlType"": ""Vector2"",
@@ -109,7 +497,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Look"",
+                    ""name"": ""PlayerLook"",
                     ""type"": ""Value"",
                     ""id"": ""d390596d-9b07-48fe-8a5b-f154034600a1"",
                     ""expectedControlType"": ""Delta"",
@@ -118,9 +506,18 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Sprint"",
+                    ""name"": ""PlayerSprint"",
                     ""type"": ""Button"",
                     ""id"": ""029feebe-81a3-4f46-92d1-6593cefc6a78"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayerInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""0b4f43c1-7b88-4598-9973-fa7d545590e6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -135,7 +532,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PlayerMovement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -146,7 +543,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -157,7 +554,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -168,7 +565,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -179,7 +576,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""PlayerMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -190,7 +587,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Look"",
+                    ""action"": ""PlayerLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -201,7 +598,18 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Sprint"",
+                    ""action"": ""PlayerSprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""794ffe29-6acb-44ed-80b5-89c185bcff25"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -212,12 +620,30 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
 }");
         // PC1Player
         m_PC1Player = asset.FindActionMap("PC1Player", throwIfNotFound: true);
-        m_PC1Player_Movement = m_PC1Player.FindAction("Movement", throwIfNotFound: true);
+        m_PC1Player_PC1PlayerMovement = m_PC1Player.FindAction("PC1PlayerMovement", throwIfNotFound: true);
+        m_PC1Player_PC1PlayerExit = m_PC1Player.FindAction("PC1PlayerExit", throwIfNotFound: true);
+        // PC2Player
+        m_PC2Player = asset.FindActionMap("PC2Player", throwIfNotFound: true);
+        m_PC2Player_PC2PlayerMovement = m_PC2Player.FindAction("PC2PlayerMovement", throwIfNotFound: true);
+        m_PC2Player_PC2PlayerExit = m_PC2Player.FindAction("PC2PlayerExit", throwIfNotFound: true);
+        // PC3Player
+        m_PC3Player = asset.FindActionMap("PC3Player", throwIfNotFound: true);
+        m_PC3Player_PC3PlayerMovement = m_PC3Player.FindAction("PC3PlayerMovement", throwIfNotFound: true);
+        m_PC3Player_PC3PlayerExit = m_PC3Player.FindAction("PC3PlayerExit", throwIfNotFound: true);
+        // PC4Player
+        m_PC4Player = asset.FindActionMap("PC4Player", throwIfNotFound: true);
+        m_PC4Player_PC4PlayerMovement = m_PC4Player.FindAction("PC4PlayerMovement", throwIfNotFound: true);
+        m_PC4Player_PC4PlayerExit = m_PC4Player.FindAction("PC4PlayerExit", throwIfNotFound: true);
+        // PC5Player
+        m_PC5Player = asset.FindActionMap("PC5Player", throwIfNotFound: true);
+        m_PC5Player_PC5PlayerMovement = m_PC5Player.FindAction("PC5PlayerMovement", throwIfNotFound: true);
+        m_PC5Player_PC5PlayerExit = m_PC5Player.FindAction("PC5PlayerExit", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
-        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
-        m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
+        m_Player_PlayerMovement = m_Player.FindAction("PlayerMovement", throwIfNotFound: true);
+        m_Player_PlayerLook = m_Player.FindAction("PlayerLook", throwIfNotFound: true);
+        m_Player_PlayerSprint = m_Player.FindAction("PlayerSprint", throwIfNotFound: true);
+        m_Player_PlayerInteract = m_Player.FindAction("PlayerInteract", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -277,12 +703,14 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     // PC1Player
     private readonly InputActionMap m_PC1Player;
     private IPC1PlayerActions m_PC1PlayerActionsCallbackInterface;
-    private readonly InputAction m_PC1Player_Movement;
+    private readonly InputAction m_PC1Player_PC1PlayerMovement;
+    private readonly InputAction m_PC1Player_PC1PlayerExit;
     public struct PC1PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PC1PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_PC1Player_Movement;
+        public InputAction @PC1PlayerMovement => m_Wrapper.m_PC1Player_PC1PlayerMovement;
+        public InputAction @PC1PlayerExit => m_Wrapper.m_PC1Player_PC1PlayerExit;
         public InputActionMap Get() { return m_Wrapper.m_PC1Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -292,34 +720,206 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         {
             if (m_Wrapper.m_PC1PlayerActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnMovement;
+                @PC1PlayerMovement.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerMovement;
+                @PC1PlayerMovement.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerMovement;
+                @PC1PlayerMovement.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerMovement;
+                @PC1PlayerExit.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerExit;
+                @PC1PlayerExit.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerExit;
+                @PC1PlayerExit.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerExit;
             }
             m_Wrapper.m_PC1PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
+                @PC1PlayerMovement.started += instance.OnPC1PlayerMovement;
+                @PC1PlayerMovement.performed += instance.OnPC1PlayerMovement;
+                @PC1PlayerMovement.canceled += instance.OnPC1PlayerMovement;
+                @PC1PlayerExit.started += instance.OnPC1PlayerExit;
+                @PC1PlayerExit.performed += instance.OnPC1PlayerExit;
+                @PC1PlayerExit.canceled += instance.OnPC1PlayerExit;
             }
         }
     }
     public PC1PlayerActions @PC1Player => new PC1PlayerActions(this);
 
+    // PC2Player
+    private readonly InputActionMap m_PC2Player;
+    private IPC2PlayerActions m_PC2PlayerActionsCallbackInterface;
+    private readonly InputAction m_PC2Player_PC2PlayerMovement;
+    private readonly InputAction m_PC2Player_PC2PlayerExit;
+    public struct PC2PlayerActions
+    {
+        private @PlayerActionControls m_Wrapper;
+        public PC2PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PC2PlayerMovement => m_Wrapper.m_PC2Player_PC2PlayerMovement;
+        public InputAction @PC2PlayerExit => m_Wrapper.m_PC2Player_PC2PlayerExit;
+        public InputActionMap Get() { return m_Wrapper.m_PC2Player; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PC2PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPC2PlayerActions instance)
+        {
+            if (m_Wrapper.m_PC2PlayerActionsCallbackInterface != null)
+            {
+                @PC2PlayerMovement.started -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerMovement;
+                @PC2PlayerMovement.performed -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerMovement;
+                @PC2PlayerMovement.canceled -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerMovement;
+                @PC2PlayerExit.started -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerExit;
+                @PC2PlayerExit.performed -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerExit;
+                @PC2PlayerExit.canceled -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerExit;
+            }
+            m_Wrapper.m_PC2PlayerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PC2PlayerMovement.started += instance.OnPC2PlayerMovement;
+                @PC2PlayerMovement.performed += instance.OnPC2PlayerMovement;
+                @PC2PlayerMovement.canceled += instance.OnPC2PlayerMovement;
+                @PC2PlayerExit.started += instance.OnPC2PlayerExit;
+                @PC2PlayerExit.performed += instance.OnPC2PlayerExit;
+                @PC2PlayerExit.canceled += instance.OnPC2PlayerExit;
+            }
+        }
+    }
+    public PC2PlayerActions @PC2Player => new PC2PlayerActions(this);
+
+    // PC3Player
+    private readonly InputActionMap m_PC3Player;
+    private IPC3PlayerActions m_PC3PlayerActionsCallbackInterface;
+    private readonly InputAction m_PC3Player_PC3PlayerMovement;
+    private readonly InputAction m_PC3Player_PC3PlayerExit;
+    public struct PC3PlayerActions
+    {
+        private @PlayerActionControls m_Wrapper;
+        public PC3PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PC3PlayerMovement => m_Wrapper.m_PC3Player_PC3PlayerMovement;
+        public InputAction @PC3PlayerExit => m_Wrapper.m_PC3Player_PC3PlayerExit;
+        public InputActionMap Get() { return m_Wrapper.m_PC3Player; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PC3PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPC3PlayerActions instance)
+        {
+            if (m_Wrapper.m_PC3PlayerActionsCallbackInterface != null)
+            {
+                @PC3PlayerMovement.started -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerMovement;
+                @PC3PlayerMovement.performed -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerMovement;
+                @PC3PlayerMovement.canceled -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerMovement;
+                @PC3PlayerExit.started -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerExit;
+                @PC3PlayerExit.performed -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerExit;
+                @PC3PlayerExit.canceled -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerExit;
+            }
+            m_Wrapper.m_PC3PlayerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PC3PlayerMovement.started += instance.OnPC3PlayerMovement;
+                @PC3PlayerMovement.performed += instance.OnPC3PlayerMovement;
+                @PC3PlayerMovement.canceled += instance.OnPC3PlayerMovement;
+                @PC3PlayerExit.started += instance.OnPC3PlayerExit;
+                @PC3PlayerExit.performed += instance.OnPC3PlayerExit;
+                @PC3PlayerExit.canceled += instance.OnPC3PlayerExit;
+            }
+        }
+    }
+    public PC3PlayerActions @PC3Player => new PC3PlayerActions(this);
+
+    // PC4Player
+    private readonly InputActionMap m_PC4Player;
+    private IPC4PlayerActions m_PC4PlayerActionsCallbackInterface;
+    private readonly InputAction m_PC4Player_PC4PlayerMovement;
+    private readonly InputAction m_PC4Player_PC4PlayerExit;
+    public struct PC4PlayerActions
+    {
+        private @PlayerActionControls m_Wrapper;
+        public PC4PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PC4PlayerMovement => m_Wrapper.m_PC4Player_PC4PlayerMovement;
+        public InputAction @PC4PlayerExit => m_Wrapper.m_PC4Player_PC4PlayerExit;
+        public InputActionMap Get() { return m_Wrapper.m_PC4Player; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PC4PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPC4PlayerActions instance)
+        {
+            if (m_Wrapper.m_PC4PlayerActionsCallbackInterface != null)
+            {
+                @PC4PlayerMovement.started -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerMovement;
+                @PC4PlayerMovement.performed -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerMovement;
+                @PC4PlayerMovement.canceled -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerMovement;
+                @PC4PlayerExit.started -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerExit;
+                @PC4PlayerExit.performed -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerExit;
+                @PC4PlayerExit.canceled -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerExit;
+            }
+            m_Wrapper.m_PC4PlayerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PC4PlayerMovement.started += instance.OnPC4PlayerMovement;
+                @PC4PlayerMovement.performed += instance.OnPC4PlayerMovement;
+                @PC4PlayerMovement.canceled += instance.OnPC4PlayerMovement;
+                @PC4PlayerExit.started += instance.OnPC4PlayerExit;
+                @PC4PlayerExit.performed += instance.OnPC4PlayerExit;
+                @PC4PlayerExit.canceled += instance.OnPC4PlayerExit;
+            }
+        }
+    }
+    public PC4PlayerActions @PC4Player => new PC4PlayerActions(this);
+
+    // PC5Player
+    private readonly InputActionMap m_PC5Player;
+    private IPC5PlayerActions m_PC5PlayerActionsCallbackInterface;
+    private readonly InputAction m_PC5Player_PC5PlayerMovement;
+    private readonly InputAction m_PC5Player_PC5PlayerExit;
+    public struct PC5PlayerActions
+    {
+        private @PlayerActionControls m_Wrapper;
+        public PC5PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PC5PlayerMovement => m_Wrapper.m_PC5Player_PC5PlayerMovement;
+        public InputAction @PC5PlayerExit => m_Wrapper.m_PC5Player_PC5PlayerExit;
+        public InputActionMap Get() { return m_Wrapper.m_PC5Player; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PC5PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPC5PlayerActions instance)
+        {
+            if (m_Wrapper.m_PC5PlayerActionsCallbackInterface != null)
+            {
+                @PC5PlayerMovement.started -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerMovement;
+                @PC5PlayerMovement.performed -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerMovement;
+                @PC5PlayerMovement.canceled -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerMovement;
+                @PC5PlayerExit.started -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerExit;
+                @PC5PlayerExit.performed -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerExit;
+                @PC5PlayerExit.canceled -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerExit;
+            }
+            m_Wrapper.m_PC5PlayerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PC5PlayerMovement.started += instance.OnPC5PlayerMovement;
+                @PC5PlayerMovement.performed += instance.OnPC5PlayerMovement;
+                @PC5PlayerMovement.canceled += instance.OnPC5PlayerMovement;
+                @PC5PlayerExit.started += instance.OnPC5PlayerExit;
+                @PC5PlayerExit.performed += instance.OnPC5PlayerExit;
+                @PC5PlayerExit.canceled += instance.OnPC5PlayerExit;
+            }
+        }
+    }
+    public PC5PlayerActions @PC5Player => new PC5PlayerActions(this);
+
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_Movement;
-    private readonly InputAction m_Player_Look;
-    private readonly InputAction m_Player_Sprint;
+    private readonly InputAction m_Player_PlayerMovement;
+    private readonly InputAction m_Player_PlayerLook;
+    private readonly InputAction m_Player_PlayerSprint;
+    private readonly InputAction m_Player_PlayerInteract;
     public struct PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Player_Movement;
-        public InputAction @Look => m_Wrapper.m_Player_Look;
-        public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
+        public InputAction @PlayerMovement => m_Wrapper.m_Player_PlayerMovement;
+        public InputAction @PlayerLook => m_Wrapper.m_Player_PlayerLook;
+        public InputAction @PlayerSprint => m_Wrapper.m_Player_PlayerSprint;
+        public InputAction @PlayerInteract => m_Wrapper.m_Player_PlayerInteract;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -329,40 +929,68 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
-                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
-                @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
-                @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @PlayerMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerMovement;
+                @PlayerMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerMovement;
+                @PlayerMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerMovement;
+                @PlayerLook.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerLook;
+                @PlayerLook.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerLook;
+                @PlayerLook.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerLook;
+                @PlayerSprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerSprint;
+                @PlayerSprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerSprint;
+                @PlayerSprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerSprint;
+                @PlayerInteract.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerInteract;
+                @PlayerInteract.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerInteract;
+                @PlayerInteract.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerInteract;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
-                @Sprint.started += instance.OnSprint;
-                @Sprint.performed += instance.OnSprint;
-                @Sprint.canceled += instance.OnSprint;
+                @PlayerMovement.started += instance.OnPlayerMovement;
+                @PlayerMovement.performed += instance.OnPlayerMovement;
+                @PlayerMovement.canceled += instance.OnPlayerMovement;
+                @PlayerLook.started += instance.OnPlayerLook;
+                @PlayerLook.performed += instance.OnPlayerLook;
+                @PlayerLook.canceled += instance.OnPlayerLook;
+                @PlayerSprint.started += instance.OnPlayerSprint;
+                @PlayerSprint.performed += instance.OnPlayerSprint;
+                @PlayerSprint.canceled += instance.OnPlayerSprint;
+                @PlayerInteract.started += instance.OnPlayerInteract;
+                @PlayerInteract.performed += instance.OnPlayerInteract;
+                @PlayerInteract.canceled += instance.OnPlayerInteract;
             }
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPC1PlayerActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnPC1PlayerMovement(InputAction.CallbackContext context);
+        void OnPC1PlayerExit(InputAction.CallbackContext context);
+    }
+    public interface IPC2PlayerActions
+    {
+        void OnPC2PlayerMovement(InputAction.CallbackContext context);
+        void OnPC2PlayerExit(InputAction.CallbackContext context);
+    }
+    public interface IPC3PlayerActions
+    {
+        void OnPC3PlayerMovement(InputAction.CallbackContext context);
+        void OnPC3PlayerExit(InputAction.CallbackContext context);
+    }
+    public interface IPC4PlayerActions
+    {
+        void OnPC4PlayerMovement(InputAction.CallbackContext context);
+        void OnPC4PlayerExit(InputAction.CallbackContext context);
+    }
+    public interface IPC5PlayerActions
+    {
+        void OnPC5PlayerMovement(InputAction.CallbackContext context);
+        void OnPC5PlayerExit(InputAction.CallbackContext context);
     }
     public interface IPlayerActions
     {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
-        void OnSprint(InputAction.CallbackContext context);
+        void OnPlayerMovement(InputAction.CallbackContext context);
+        void OnPlayerLook(InputAction.CallbackContext context);
+        void OnPlayerSprint(InputAction.CallbackContext context);
+        void OnPlayerInteract(InputAction.CallbackContext context);
     }
 }
