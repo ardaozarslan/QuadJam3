@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PC : MonoBehaviour, Interactable
+public class PC : MonoBehaviour, IInteractable
 {
 	[SerializeField]
 	private GameObject screenOff;
@@ -38,6 +38,12 @@ public class PC : MonoBehaviour, Interactable
 			isUnlocked = true;
 			screenOff.SetActive(false);
 			screenOn.SetActive(true);
+			if (actionMapName == "PC1Player")
+			{
+				bool activatedNextAssignment = false;
+				AssignmentManager.Instance.ActivateNextAssignment(ref activatedNextAssignment);
+				AssignmentCanvasManager.Instance.ShowAssignment(AssignmentManager.Instance.CurrentAssignment.name);
+			}
 		}
 		InputManager.Instance.SwitchActionMap(inputManager.GetActionMap(actionMapName));
 	}

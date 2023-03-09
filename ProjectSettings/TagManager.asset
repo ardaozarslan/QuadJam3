@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - PC1Interact
+  - PCInteractable
   layers:
   - Default
   - TransparentFX

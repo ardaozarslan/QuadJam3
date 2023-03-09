@@ -95,7 +95,7 @@ public class Player : Singleton<Player>
 			{
 				Debug.Log("Hit " + hit.collider.name);
 				// get the interactable component from the object we hit
-				Interactable interactable = hit.collider.GetComponent<Interactable>();
+				IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 				// if the object we hit has an interactable component, call the interact method
 				if (interactable != null)
 				{

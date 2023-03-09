@@ -44,6 +44,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC1PlayerInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""906d96bb-8f8d-4ba4-a842-83e11f4629b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -112,6 +121,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC1PlayerExit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0bacf99c-6850-4e7f-81fa-b5d04012da18"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC1PlayerInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -132,6 +152,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC2PlayerExit"",
                     ""type"": ""Button"",
                     ""id"": ""835e28a5-9a5b-439c-b973-68a7f09b1ade"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC2PlayerInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d87e8dd-11c5-43b7-8459-e3a4a7ab78bf"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -204,6 +233,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC2PlayerExit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83f00f47-6abb-40d1-9183-d07ef7145d9a"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -224,6 +264,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC3PlayerExit"",
                     ""type"": ""Button"",
                     ""id"": ""1a138063-39aa-47f9-ab1c-fc654c09a6b2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC3PlayerInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""a75d4879-cc30-4add-8567-42a5f3bbbd17"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -296,6 +345,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC3PlayerExit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b43f82d8-31b8-491b-b6ab-3a65adbf7367"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -316,6 +376,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC4PlayerExit"",
                     ""type"": ""Button"",
                     ""id"": ""c92211a9-f687-42da-8680-8d21278a4436"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC4PlayerInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""27ecd700-b74c-4a76-bd25-d45a0db62e73"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -388,6 +457,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC4PlayerExit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3999b9c5-08c0-4658-bcbc-252dc84c4a5b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -408,6 +488,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC5PlayerExit"",
                     ""type"": ""Button"",
                     ""id"": ""9e1f3dbd-6114-484c-b966-d46ad0e5a339"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC5PlayerInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""92a96456-1ffa-4979-bdd5-0d881aeb8e4e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -478,6 +567,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""PC5PlayerExit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a77fc985-e94c-4381-9ee7-19ba40638b29"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -622,22 +722,27 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         m_PC1Player = asset.FindActionMap("PC1Player", throwIfNotFound: true);
         m_PC1Player_PC1PlayerMovement = m_PC1Player.FindAction("PC1PlayerMovement", throwIfNotFound: true);
         m_PC1Player_PC1PlayerExit = m_PC1Player.FindAction("PC1PlayerExit", throwIfNotFound: true);
+        m_PC1Player_PC1PlayerInteract = m_PC1Player.FindAction("PC1PlayerInteract", throwIfNotFound: true);
         // PC2Player
         m_PC2Player = asset.FindActionMap("PC2Player", throwIfNotFound: true);
         m_PC2Player_PC2PlayerMovement = m_PC2Player.FindAction("PC2PlayerMovement", throwIfNotFound: true);
         m_PC2Player_PC2PlayerExit = m_PC2Player.FindAction("PC2PlayerExit", throwIfNotFound: true);
+        m_PC2Player_PC2PlayerInteract = m_PC2Player.FindAction("PC2PlayerInteract", throwIfNotFound: true);
         // PC3Player
         m_PC3Player = asset.FindActionMap("PC3Player", throwIfNotFound: true);
         m_PC3Player_PC3PlayerMovement = m_PC3Player.FindAction("PC3PlayerMovement", throwIfNotFound: true);
         m_PC3Player_PC3PlayerExit = m_PC3Player.FindAction("PC3PlayerExit", throwIfNotFound: true);
+        m_PC3Player_PC3PlayerInteract = m_PC3Player.FindAction("PC3PlayerInteract", throwIfNotFound: true);
         // PC4Player
         m_PC4Player = asset.FindActionMap("PC4Player", throwIfNotFound: true);
         m_PC4Player_PC4PlayerMovement = m_PC4Player.FindAction("PC4PlayerMovement", throwIfNotFound: true);
         m_PC4Player_PC4PlayerExit = m_PC4Player.FindAction("PC4PlayerExit", throwIfNotFound: true);
+        m_PC4Player_PC4PlayerInteract = m_PC4Player.FindAction("PC4PlayerInteract", throwIfNotFound: true);
         // PC5Player
         m_PC5Player = asset.FindActionMap("PC5Player", throwIfNotFound: true);
         m_PC5Player_PC5PlayerMovement = m_PC5Player.FindAction("PC5PlayerMovement", throwIfNotFound: true);
         m_PC5Player_PC5PlayerExit = m_PC5Player.FindAction("PC5PlayerExit", throwIfNotFound: true);
+        m_PC5Player_PC5PlayerInteract = m_PC5Player.FindAction("PC5PlayerInteract", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_PlayerMovement = m_Player.FindAction("PlayerMovement", throwIfNotFound: true);
@@ -705,12 +810,14 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private IPC1PlayerActions m_PC1PlayerActionsCallbackInterface;
     private readonly InputAction m_PC1Player_PC1PlayerMovement;
     private readonly InputAction m_PC1Player_PC1PlayerExit;
+    private readonly InputAction m_PC1Player_PC1PlayerInteract;
     public struct PC1PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PC1PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PC1PlayerMovement => m_Wrapper.m_PC1Player_PC1PlayerMovement;
         public InputAction @PC1PlayerExit => m_Wrapper.m_PC1Player_PC1PlayerExit;
+        public InputAction @PC1PlayerInteract => m_Wrapper.m_PC1Player_PC1PlayerInteract;
         public InputActionMap Get() { return m_Wrapper.m_PC1Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -726,6 +833,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC1PlayerExit.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerExit;
                 @PC1PlayerExit.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerExit;
                 @PC1PlayerExit.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerExit;
+                @PC1PlayerInteract.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerInteract;
+                @PC1PlayerInteract.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerInteract;
+                @PC1PlayerInteract.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerInteract;
             }
             m_Wrapper.m_PC1PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -736,6 +846,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC1PlayerExit.started += instance.OnPC1PlayerExit;
                 @PC1PlayerExit.performed += instance.OnPC1PlayerExit;
                 @PC1PlayerExit.canceled += instance.OnPC1PlayerExit;
+                @PC1PlayerInteract.started += instance.OnPC1PlayerInteract;
+                @PC1PlayerInteract.performed += instance.OnPC1PlayerInteract;
+                @PC1PlayerInteract.canceled += instance.OnPC1PlayerInteract;
             }
         }
     }
@@ -746,12 +859,14 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private IPC2PlayerActions m_PC2PlayerActionsCallbackInterface;
     private readonly InputAction m_PC2Player_PC2PlayerMovement;
     private readonly InputAction m_PC2Player_PC2PlayerExit;
+    private readonly InputAction m_PC2Player_PC2PlayerInteract;
     public struct PC2PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PC2PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PC2PlayerMovement => m_Wrapper.m_PC2Player_PC2PlayerMovement;
         public InputAction @PC2PlayerExit => m_Wrapper.m_PC2Player_PC2PlayerExit;
+        public InputAction @PC2PlayerInteract => m_Wrapper.m_PC2Player_PC2PlayerInteract;
         public InputActionMap Get() { return m_Wrapper.m_PC2Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -767,6 +882,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC2PlayerExit.started -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerExit;
                 @PC2PlayerExit.performed -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerExit;
                 @PC2PlayerExit.canceled -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerExit;
+                @PC2PlayerInteract.started -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerInteract;
+                @PC2PlayerInteract.performed -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerInteract;
+                @PC2PlayerInteract.canceled -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerInteract;
             }
             m_Wrapper.m_PC2PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -777,6 +895,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC2PlayerExit.started += instance.OnPC2PlayerExit;
                 @PC2PlayerExit.performed += instance.OnPC2PlayerExit;
                 @PC2PlayerExit.canceled += instance.OnPC2PlayerExit;
+                @PC2PlayerInteract.started += instance.OnPC2PlayerInteract;
+                @PC2PlayerInteract.performed += instance.OnPC2PlayerInteract;
+                @PC2PlayerInteract.canceled += instance.OnPC2PlayerInteract;
             }
         }
     }
@@ -787,12 +908,14 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private IPC3PlayerActions m_PC3PlayerActionsCallbackInterface;
     private readonly InputAction m_PC3Player_PC3PlayerMovement;
     private readonly InputAction m_PC3Player_PC3PlayerExit;
+    private readonly InputAction m_PC3Player_PC3PlayerInteract;
     public struct PC3PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PC3PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PC3PlayerMovement => m_Wrapper.m_PC3Player_PC3PlayerMovement;
         public InputAction @PC3PlayerExit => m_Wrapper.m_PC3Player_PC3PlayerExit;
+        public InputAction @PC3PlayerInteract => m_Wrapper.m_PC3Player_PC3PlayerInteract;
         public InputActionMap Get() { return m_Wrapper.m_PC3Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -808,6 +931,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC3PlayerExit.started -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerExit;
                 @PC3PlayerExit.performed -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerExit;
                 @PC3PlayerExit.canceled -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerExit;
+                @PC3PlayerInteract.started -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerInteract;
+                @PC3PlayerInteract.performed -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerInteract;
+                @PC3PlayerInteract.canceled -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerInteract;
             }
             m_Wrapper.m_PC3PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -818,6 +944,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC3PlayerExit.started += instance.OnPC3PlayerExit;
                 @PC3PlayerExit.performed += instance.OnPC3PlayerExit;
                 @PC3PlayerExit.canceled += instance.OnPC3PlayerExit;
+                @PC3PlayerInteract.started += instance.OnPC3PlayerInteract;
+                @PC3PlayerInteract.performed += instance.OnPC3PlayerInteract;
+                @PC3PlayerInteract.canceled += instance.OnPC3PlayerInteract;
             }
         }
     }
@@ -828,12 +957,14 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private IPC4PlayerActions m_PC4PlayerActionsCallbackInterface;
     private readonly InputAction m_PC4Player_PC4PlayerMovement;
     private readonly InputAction m_PC4Player_PC4PlayerExit;
+    private readonly InputAction m_PC4Player_PC4PlayerInteract;
     public struct PC4PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PC4PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PC4PlayerMovement => m_Wrapper.m_PC4Player_PC4PlayerMovement;
         public InputAction @PC4PlayerExit => m_Wrapper.m_PC4Player_PC4PlayerExit;
+        public InputAction @PC4PlayerInteract => m_Wrapper.m_PC4Player_PC4PlayerInteract;
         public InputActionMap Get() { return m_Wrapper.m_PC4Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -849,6 +980,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC4PlayerExit.started -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerExit;
                 @PC4PlayerExit.performed -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerExit;
                 @PC4PlayerExit.canceled -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerExit;
+                @PC4PlayerInteract.started -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerInteract;
+                @PC4PlayerInteract.performed -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerInteract;
+                @PC4PlayerInteract.canceled -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerInteract;
             }
             m_Wrapper.m_PC4PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -859,6 +993,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC4PlayerExit.started += instance.OnPC4PlayerExit;
                 @PC4PlayerExit.performed += instance.OnPC4PlayerExit;
                 @PC4PlayerExit.canceled += instance.OnPC4PlayerExit;
+                @PC4PlayerInteract.started += instance.OnPC4PlayerInteract;
+                @PC4PlayerInteract.performed += instance.OnPC4PlayerInteract;
+                @PC4PlayerInteract.canceled += instance.OnPC4PlayerInteract;
             }
         }
     }
@@ -869,12 +1006,14 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private IPC5PlayerActions m_PC5PlayerActionsCallbackInterface;
     private readonly InputAction m_PC5Player_PC5PlayerMovement;
     private readonly InputAction m_PC5Player_PC5PlayerExit;
+    private readonly InputAction m_PC5Player_PC5PlayerInteract;
     public struct PC5PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
         public PC5PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PC5PlayerMovement => m_Wrapper.m_PC5Player_PC5PlayerMovement;
         public InputAction @PC5PlayerExit => m_Wrapper.m_PC5Player_PC5PlayerExit;
+        public InputAction @PC5PlayerInteract => m_Wrapper.m_PC5Player_PC5PlayerInteract;
         public InputActionMap Get() { return m_Wrapper.m_PC5Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -890,6 +1029,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC5PlayerExit.started -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerExit;
                 @PC5PlayerExit.performed -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerExit;
                 @PC5PlayerExit.canceled -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerExit;
+                @PC5PlayerInteract.started -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerInteract;
+                @PC5PlayerInteract.performed -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerInteract;
+                @PC5PlayerInteract.canceled -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerInteract;
             }
             m_Wrapper.m_PC5PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -900,6 +1042,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC5PlayerExit.started += instance.OnPC5PlayerExit;
                 @PC5PlayerExit.performed += instance.OnPC5PlayerExit;
                 @PC5PlayerExit.canceled += instance.OnPC5PlayerExit;
+                @PC5PlayerInteract.started += instance.OnPC5PlayerInteract;
+                @PC5PlayerInteract.performed += instance.OnPC5PlayerInteract;
+                @PC5PlayerInteract.canceled += instance.OnPC5PlayerInteract;
             }
         }
     }
@@ -965,26 +1110,31 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     {
         void OnPC1PlayerMovement(InputAction.CallbackContext context);
         void OnPC1PlayerExit(InputAction.CallbackContext context);
+        void OnPC1PlayerInteract(InputAction.CallbackContext context);
     }
     public interface IPC2PlayerActions
     {
         void OnPC2PlayerMovement(InputAction.CallbackContext context);
         void OnPC2PlayerExit(InputAction.CallbackContext context);
+        void OnPC2PlayerInteract(InputAction.CallbackContext context);
     }
     public interface IPC3PlayerActions
     {
         void OnPC3PlayerMovement(InputAction.CallbackContext context);
         void OnPC3PlayerExit(InputAction.CallbackContext context);
+        void OnPC3PlayerInteract(InputAction.CallbackContext context);
     }
     public interface IPC4PlayerActions
     {
         void OnPC4PlayerMovement(InputAction.CallbackContext context);
         void OnPC4PlayerExit(InputAction.CallbackContext context);
+        void OnPC4PlayerInteract(InputAction.CallbackContext context);
     }
     public interface IPC5PlayerActions
     {
         void OnPC5PlayerMovement(InputAction.CallbackContext context);
         void OnPC5PlayerExit(InputAction.CallbackContext context);
+        void OnPC5PlayerInteract(InputAction.CallbackContext context);
     }
     public interface IPlayerActions
     {

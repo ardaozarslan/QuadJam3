@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PC1PlayerInteract",
+                    "type": "Button",
+                    "id": "906d96bb-8f8d-4ba4-a842-83e11f4629b9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -90,6 +99,17 @@
                     "action": "PC1PlayerExit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0bacf99c-6850-4e7f-81fa-b5d04012da18",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC1PlayerInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -110,6 +130,15 @@
                     "name": "PC2PlayerExit",
                     "type": "Button",
                     "id": "835e28a5-9a5b-439c-b973-68a7f09b1ade",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC2PlayerInteract",
+                    "type": "Button",
+                    "id": "8d87e8dd-11c5-43b7-8459-e3a4a7ab78bf",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -182,6 +211,17 @@
                     "action": "PC2PlayerExit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83f00f47-6abb-40d1-9183-d07ef7145d9a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC2PlayerInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -202,6 +242,15 @@
                     "name": "PC3PlayerExit",
                     "type": "Button",
                     "id": "1a138063-39aa-47f9-ab1c-fc654c09a6b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC3PlayerInteract",
+                    "type": "Button",
+                    "id": "a75d4879-cc30-4add-8567-42a5f3bbbd17",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -274,6 +323,17 @@
                     "action": "PC3PlayerExit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b43f82d8-31b8-491b-b6ab-3a65adbf7367",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC3PlayerInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -294,6 +354,15 @@
                     "name": "PC4PlayerExit",
                     "type": "Button",
                     "id": "c92211a9-f687-42da-8680-8d21278a4436",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC4PlayerInteract",
+                    "type": "Button",
+                    "id": "27ecd700-b74c-4a76-bd25-d45a0db62e73",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -366,6 +435,17 @@
                     "action": "PC4PlayerExit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3999b9c5-08c0-4658-bcbc-252dc84c4a5b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC4PlayerInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -386,6 +466,15 @@
                     "name": "PC5PlayerExit",
                     "type": "Button",
                     "id": "9e1f3dbd-6114-484c-b966-d46ad0e5a339",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC5PlayerInteract",
+                    "type": "Button",
+                    "id": "92a96456-1ffa-4979-bdd5-0d881aeb8e4e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -456,6 +545,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PC5PlayerExit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a77fc985-e94c-4381-9ee7-19ba40638b29",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC5PlayerInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
