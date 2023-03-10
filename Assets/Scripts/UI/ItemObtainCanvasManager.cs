@@ -9,10 +9,19 @@ public class ItemObtainCanvasManager : Singleton<ItemObtainCanvasManager>
 
 	public GameObject itemObtainPrefab;
 
-	public void ShowItemObtain(string itemName, Sprite itemSprite)
+	private void OnEnable() {
+		InventoryManager.onRegisterItem += ShowItemObtain;
+	}
+
+	private void OnDisable() {
+		InventoryManager.onRegisterItem -= ShowItemObtain;
+	}
+
+	public void ShowItemObtain(string itemName, int itemCount, Sprite itemSprite)
 	{
+		string shownItemText = "+" + itemCount.ToString();
 		GameObject itemObtainObject = Instantiate(itemObtainPrefab, transform);
-		itemObtainObject.GetComponentInChildren<TextMeshProUGUI>().text = itemName;
+		itemObtainObject.GetComponentInChildren<TextMeshProUGUI>().text = shownItemText;
 		itemObtainObject.GetComponentInChildren<Image>().sprite = itemSprite;
 		StartCoroutine(DestroyItemObtain(itemObtainObject));
 		

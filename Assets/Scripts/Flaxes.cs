@@ -14,9 +14,10 @@ public class Flaxes : MonoBehaviour, IPCInteractable
 	public void Interact()
 	{
 		Debug.Log("Interacting with flaxes");
-		ItemObtainCanvasManager.Instance.ShowItemObtain("+1", sprite);
-		AssignmentManager.Instance.RegisterItem("flax", 1);
+		InventoryManager.Instance.RegisterItem("flax", 1, sprite);
+		// ItemObtainCanvasManager.Instance.ShowItemObtain("+1", sprite);
+		// AssignmentManager.Instance.RegisterItem("flax", 1);
 	}
 
-	
+
 }

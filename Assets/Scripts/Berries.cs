@@ -14,9 +14,10 @@ public class Berries : MonoBehaviour, IPCInteractable
 	public void Interact()
 	{
 		Debug.Log("Interacting with berries");
-		ItemObtainCanvasManager.Instance.ShowItemObtain("+1", sprite);
-		AssignmentManager.Instance.RegisterItem("berry", 1);
+		InventoryManager.Instance.RegisterItem("berry", 1, sprite);
+		// ItemObtainCanvasManager.Instance.ShowItemObtain("+1", sprite);
+		// AssignmentManager.Instance.RegisterItem("berry", 1);
 	}
 
-	
+
 }

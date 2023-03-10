@@ -9,28 +9,44 @@ public class AssignmentCanvasManager : Singleton<AssignmentCanvasManager>
 
 	public TextMeshProUGUI assignmentObject;
 
-	private void Awake() {
+	private void Awake()
+	{
 		assignmentObject = GetComponentInChildren<TextMeshProUGUI>();
 	}
 
 	public void ShowAssignment(string assignmentText)
 	{
 		StartCoroutine(ShowAssignmentCoroutine(assignmentText));
+		int soundPlayCount = Mathf.CeilToInt(assignmentText.Length * 2 / 3);
+		StartCoroutine(PlaySoundCoroutine(soundPlayCount));
 	}
 
 	private IEnumerator ShowAssignmentCoroutine(string assignmentText)
 	{
 		assignmentObject.text = "";
-		Debug.Log(assignmentText.Length);
+		// bool playSound = true;
 		for (int i = 0; i < assignmentText.Length; i++)
 		{
 			assignmentObject.text += assignmentText[i];
+			// if (playSound) AudioManager.Instance.PlayRandomNarratorAudio();
+			// playSound = !playSound;
 			yield return new WaitForSeconds(0.05f);
 		}
 		yield return null;
 	}
 
-	public void CompleteAssignment() {
+	private IEnumerator PlaySoundCoroutine(int soundPlayCount)
+	{
+		for (int i = 0; i < soundPlayCount; i++)
+		{
+			AudioManager.Instance.PlayRandomNarratorAudio();
+			yield return new WaitForSeconds(0.075f);
+		}
+		yield return null;
+	}
+
+	public void CompleteAssignment()
+	{
 		StartCoroutine(CompleteAssignmentCoroutine());
 	}
 
@@ -44,12 +60,12 @@ public class AssignmentCanvasManager : Singleton<AssignmentCanvasManager>
 			characterIndex++;
 			yield return new WaitForSeconds(0.03f);
 		}
-		yield return new WaitForSeconds(4f);
+		yield return new WaitForSeconds(2.5f);
 
 		if (AssignmentManager.Instance.CurrentAssignment != null)
 		{
 			AssignmentCanvasManager.Instance.ShowAssignment(AssignmentManager.Instance.CurrentAssignment.name);
 		}
 	}
-	
+
 }

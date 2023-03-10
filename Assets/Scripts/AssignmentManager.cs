@@ -16,8 +16,9 @@ public class Assignment
 	public int itemRegisterAmount1;
 	public string itemRegisterName2;
 	public int itemRegisterAmount2;
+	public string unlocksPC;
 
-	public Assignment(string name, string description, bool completed, bool active, bool isMain, bool isSide, string itemRegisterName1, string itemRegisterName2, int itemRegisterAmount1, int itemRegisterAmount2)
+	public Assignment(string name, string description, bool completed, bool active, bool isMain, bool isSide, string itemRegisterName1, string itemRegisterName2, int itemRegisterAmount1, int itemRegisterAmount2, string unlocksPC)
 	{
 		this.name = name;
 		this.description = description;
@@ -29,6 +30,7 @@ public class Assignment
 		this.itemRegisterName2 = itemRegisterName2;
 		this.itemRegisterAmount1 = itemRegisterAmount1;
 		this.itemRegisterAmount2 = itemRegisterAmount2;
+		this.unlocksPC = unlocksPC;
 	}
 }
 
@@ -53,11 +55,21 @@ public class AssignmentManager : Singleton<AssignmentManager>
 		}
 	}
 
+	private void OnEnable()
+	{
+		InventoryManager.onRegisterItem += RegisterItem;
+	}
+
+	private void OnDisable()
+	{
+		InventoryManager.onRegisterItem -= RegisterItem;
+	}
+
 	private void Awake()
 	{
 		for (int i = 0; i < assignmentSOs.Count; i++)
 		{
-			assignments.Add(new Assignment(assignmentSOs[i].name, assignmentSOs[i].description, assignmentSOs[i].completed, assignmentSOs[i].active, assignmentSOs[i].isMain, assignmentSOs[i].isSide, assignmentSOs[i].itemRegisterName1, assignmentSOs[i].itemRegisterName2, assignmentSOs[i].itemRegisterAmount1, assignmentSOs[i].itemRegisterAmount2));
+			assignments.Add(new Assignment(assignmentSOs[i].name, assignmentSOs[i].description, assignmentSOs[i].completed, assignmentSOs[i].active, assignmentSOs[i].isMain, assignmentSOs[i].isSide, assignmentSOs[i].itemRegisterName1, assignmentSOs[i].itemRegisterName2, assignmentSOs[i].itemRegisterAmount1, assignmentSOs[i].itemRegisterAmount2, assignmentSOs[i].unlocksPC));
 		}
 	}
 
@@ -88,6 +100,10 @@ public class AssignmentManager : Singleton<AssignmentManager>
 		assignment.active = false;
 		bool activatedNextAssignment = false;
 		Debug.Log("Completed assignment: " + assignment.name);
+		if (assignment.unlocksPC != "")
+		{
+			PCManager.Instance.UnlockPC(assignment.unlocksPC);
+		}
 		ActivateNextAssignment(ref activatedNextAssignment);
 		AssignmentCanvasManager.Instance.CompleteAssignment();
 		if (!activatedNextAssignment)
@@ -96,7 +112,7 @@ public class AssignmentManager : Singleton<AssignmentManager>
 		}
 	}
 
-	public void RegisterItem(string itemName, int itemCount)
+	public void RegisterItem(string itemName, int itemCount, Sprite sprite)
 	{
 		if (CurrentAssignment != null)
 		{

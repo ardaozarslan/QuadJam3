@@ -17,4 +17,6 @@ public class AssignmentSO : ScriptableObject
 	public int itemRegisterAmount1;
 	public string itemRegisterName2;
 	public int itemRegisterAmount2;
+
+	public string unlocksPC;
 }

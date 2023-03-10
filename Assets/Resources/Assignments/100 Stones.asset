@@ -10,19 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb1536cd12970c449bc00d8fae0be747, type: 3}
-  m_Name: 5 Sticks 5 Pebbles
+  m_Name: 100 Stones
   m_EditorClassIdentifier: 
-  name: Collect 5 sticks and 5 pebbles
+  name: Collect 100 stones
   description: 'Gives 1 minnion
 
-    Unlocks PC D
+    Unlocks PC E
 
-    Unlocks small pickaxe crafting'
+    Unlocks small axe crafting
+
+    Unlocks
+    big ITEM crafting'
   completed: 0
   active: 0
   isMain: 1
   isSide: 0
-  itemRegisterName1: stick
-  itemRegisterAmount1: 5
-  itemRegisterName2: pebble
-  itemRegisterAmount2: 5
+  itemRegisterName1: stone
+  itemRegisterAmount1: 100
+  itemRegisterName2: 
+  itemRegisterAmount2: 0
+  unlocksPC: 5

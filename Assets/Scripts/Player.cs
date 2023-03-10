@@ -17,9 +17,11 @@ public class Player : Singleton<Player>
 	public Transform orientation;
 	public Transform rootObject;
 
+	public GameObject playerAudioSource;
+
 	[Header("Movement")]
-	private float xRotation;
-	private float yRotation;
+	public float xRotation;
+	public float yRotation;
 
 	public float sensX = 30f;
 	public float sensY = 30f;
@@ -28,6 +30,10 @@ public class Player : Singleton<Player>
 	public float sprintSpeed = 10f;
 	private Vector3 moveDirection;
 	private float movementInputValue = 0f;
+
+	public InventoryManager inventoryManager;
+
+	public Transform eyesTransform;
 
 	public MovementState movementState;
 	public enum MovementState
@@ -47,6 +53,7 @@ public class Player : Singleton<Player>
 		inputManager = InputManager.Instance;
 		movementState = MovementState.Idle;
 		moveSpeed = walkSpeed;
+		inventoryManager = InventoryManager.Instance;
 	}
 
 	private void OnEnable()
@@ -72,10 +79,12 @@ public class Player : Singleton<Player>
 		}
 		else if (context.canceled)
 		{
-			if (movementInputValue > 0) {
+			if (movementInputValue > 0)
+			{
 				movementState = MovementState.Walking;
 			}
-			else {
+			else
+			{
 				movementState = MovementState.Idle;
 			}
 			moveSpeed = walkSpeed;
@@ -122,11 +131,7 @@ public class Player : Singleton<Player>
 			movementState = MovementState.Walking;
 		}
 
-
-		moveDirection = rootObject.forward * inputVector.y + rootObject.right * inputVector.x;
-		moveDirection.y = 0;
-		moveDirection.Normalize();
-		if (moveDirection.z < 0)
+		if (inputVector.y < 0)
 		{
 			animator.SetFloat("moveDirection", -1f);
 		}
@@ -134,6 +139,11 @@ public class Player : Singleton<Player>
 		{
 			animator.SetFloat("moveDirection", 1f);
 		}
+
+
+		moveDirection = rootObject.forward * inputVector.y + rootObject.right * inputVector.x;
+		moveDirection.y = 0;
+		moveDirection.Normalize();
 		movementInputValue = inputVector.magnitude;
 
 		float newVelocityX = Mathf.Lerp(rb.velocity.x, moveDirection.x * moveSpeed, 10f * Time.deltaTime);

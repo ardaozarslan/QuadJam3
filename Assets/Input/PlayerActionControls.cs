@@ -114,7 +114,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""04b57abd-5e0a-46cd-be2c-bcbd1d049bdb"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -226,7 +226,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""6f60dea4-1aa2-4748-9010-c17cf1981fef"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -338,7 +338,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""174846c2-1f5c-40e6-aec1-3610aaaaae58"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -450,7 +450,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""2981d04b-7499-44b8-9847-d865089476be"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -562,7 +562,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""f9ff5f54-e95f-4e09-97f8-8ffa62a82b59"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
