@@ -21,6 +21,11 @@ public class AudioManager : Singleton<AudioManager>
 		newNarratorAudioSource.AddComponent<AudioSource>();
 		newNarratorAudioSource.GetComponent<AudioSource>().clip = narratorAudioClips[index];
 		newNarratorAudioSource.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+		// newNarratorAudioSource.AddComponent<AudioEchoFilter>();
+		// newNarratorAudioSource.GetComponent<AudioEchoFilter>().delay = 10;
+		// newNarratorAudioSource.GetComponent<AudioEchoFilter>().decayRatio = 0.88f;
+		// newNarratorAudioSource.GetComponent<AudioEchoFilter>().wetMix = 0.16f;
+		// newNarratorAudioSource.GetComponent<AudioEchoFilter>().dryMix = 0.85f;
 		newNarratorAudioSource.GetComponent<AudioSource>().Play();
 		Destroy(newNarratorAudioSource, 1f);
 	}

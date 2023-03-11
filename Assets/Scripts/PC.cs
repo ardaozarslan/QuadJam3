@@ -35,6 +35,8 @@ public class PC : MonoBehaviour, IInteractable
 	public bool lightsAndCogsTriggered = false;
 	public bool isCompleted = false;
 
+	private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> playerPositionTween;
+
 	private float pillarEmissionIntensity = 0f;
 
 	private void Awake()
@@ -52,6 +54,8 @@ public class PC : MonoBehaviour, IInteractable
 		sigil.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(1f, 1f, 1f) * pillarEmissionIntensity);
 		bigCog.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
 		smallCog.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+
+		sigil.transform.DOLocalMoveZ(0.5f, 0.0f);
 	}
 
 	void Start()
@@ -64,7 +68,11 @@ public class PC : MonoBehaviour, IInteractable
 	{
 		Rigidbody rb = player.GetComponent<Rigidbody>();
 		rb.isKinematic = true;
-		var playerPositionTween = rb.DOMove(new Vector3(playerExitTransform.position.x, rb.position.y, playerExitTransform.position.z), 0.5f);
+		if (playerPositionTween != null)
+		{
+			playerPositionTween.Kill();
+		}
+		playerPositionTween = rb.DOMove(new Vector3(playerExitTransform.position.x, rb.position.y, playerExitTransform.position.z), 0.2f);
 		playerPositionTween.SetUpdate(UpdateType.Fixed);
 		playerPositionTween.OnComplete(() =>
 		{
@@ -121,9 +129,14 @@ public class PC : MonoBehaviour, IInteractable
 		}
 		// DOTween.To(() => player.transform.position, x => player.transform.position = new Vector3(x.x, player.transform.position.y, x.z), playerMoveTransform.position, 0.5f);
 
+
 		Rigidbody rb = player.GetComponent<Rigidbody>();
 		rb.isKinematic = true;
-		var playerPositionTween = rb.DOMove(new Vector3(playerMoveTransform.position.x, rb.position.y, playerMoveTransform.position.z), 0.5f);
+		if (playerPositionTween != null)
+		{
+			playerPositionTween.Kill();
+		}
+		playerPositionTween = rb.DOMove(new Vector3(playerMoveTransform.position.x, rb.position.y, playerMoveTransform.position.z), 0.5f);
 		playerPositionTween.SetUpdate(UpdateType.Fixed);
 
 		playerPositionTween.OnUpdate(() =>
@@ -172,6 +185,9 @@ public class PC : MonoBehaviour, IInteractable
 				sigil.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(1f, 1f, 1f) * pillarEmissionIntensity);
 			});
 
+		});
+		sigil.transform.DOLocalMoveZ(0.8f, 3f).OnComplete(() => {
+			sigil.GetComponent<Sigil>().ActivateColliders();
 		});
 	}
 

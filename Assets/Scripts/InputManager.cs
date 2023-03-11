@@ -11,6 +11,8 @@ public class InputManager : Singleton<InputManager>
 
 	public InputActionMap currentActionMap;
 
+	public GameObject crosshair;
+
 	private void OnEnable()
 	{
 		
@@ -68,27 +70,32 @@ public class InputManager : Singleton<InputManager>
 			Debug.Log("Player action map enabled");
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
+
+			crosshair.SetActive(true);
 		}
-		else if (currentActionMap == controls.PC1Player.Get())
-		{
-			Debug.Log("PC1Player action map enabled");
+		else {
+			crosshair.SetActive(false);
 		}
-		else if (controls.PC2Player.Equals(currentActionMap))
-		{
-			Debug.Log("PC2Player action map enabled");
-		}
-		else if (controls.PC3Player.Equals(currentActionMap))
-		{
-			Debug.Log("PC3Player action map enabled");
-		}
-		else if (controls.PC4Player.Equals(currentActionMap))
-		{
-			Debug.Log("PC4Player action map enabled");
-		}
-		else if (controls.PC5Player.Equals(currentActionMap))
-		{
-			Debug.Log("PC5Player action map enabled");
-		}
+		// else if (currentActionMap == controls.PC1Player.Get())
+		// {
+		// 	Debug.Log("PC1Player action map enabled");
+		// }
+		// else if (controls.PC2Player.Equals(currentActionMap))
+		// {
+		// 	Debug.Log("PC2Player action map enabled");
+		// }
+		// else if (controls.PC3Player.Equals(currentActionMap))
+		// {
+		// 	Debug.Log("PC3Player action map enabled");
+		// }
+		// else if (controls.PC4Player.Equals(currentActionMap))
+		// {
+		// 	Debug.Log("PC4Player action map enabled");
+		// }
+		// else if (controls.PC5Player.Equals(currentActionMap))
+		// {
+		// 	Debug.Log("PC5Player action map enabled");
+		// }
 	}
 
 	public void TemporarilyDisableCurrentActionMap()
