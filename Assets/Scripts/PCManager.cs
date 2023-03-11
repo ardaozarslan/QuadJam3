@@ -14,17 +14,25 @@ public class PCManager : Singleton<PCManager>
 	private void Awake()
 	{
 		inputManager = InputManager.Instance;
-		controls = InputManager.Instance.controls;
 		player = Player.Instance;
+
+
+
 	}
 
-	private void OnEnable()
+	private void Start()
 	{
+		controls = InputManager.Instance.controls;
 		controls.PC1Player.PC1PlayerExit.performed += ExitAction;
 		controls.PC2Player.PC2PlayerExit.performed += ExitAction;
 		controls.PC3Player.PC3PlayerExit.performed += ExitAction;
 		controls.PC4Player.PC4PlayerExit.performed += ExitAction;
 		controls.PC5Player.PC5PlayerExit.performed += ExitAction;
+	}
+
+	private void OnEnable()
+	{
+
 	}
 
 	private void OnDisable()

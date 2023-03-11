@@ -187,7 +187,7 @@ public class PC : MonoBehaviour, IInteractable
 
 		});
 		sigil.transform.DOLocalMoveZ(0.8f, 3f).OnComplete(() => {
-			sigil.GetComponent<Sigil>().ActivateColliders();
+			sigil.GetComponent<Sigil>().ActivateSigil();
 		});
 	}
 

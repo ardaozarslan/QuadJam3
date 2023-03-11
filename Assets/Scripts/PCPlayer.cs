@@ -23,7 +23,6 @@ public class PCPlayer : MonoBehaviour
 
 	private void Awake()
 	{
-		controls = InputManager.Instance.controls;
 		rb = GetComponent<Rigidbody2D>();
 		inputManager = InputManager.Instance;
 		foreach (GameObject go in interactableGameObjects)
@@ -32,9 +31,15 @@ public class PCPlayer : MonoBehaviour
 		}
 	}
 
+	private void Start()
+	{
+		controls = InputManager.Instance.controls;
+		controls.FindAction($"{pc.actionMapName}Interact").performed += Interact;
+	}
+
 	private void OnEnable()
 	{
-		controls.FindAction($"{pc.actionMapName}Interact").performed += Interact;
+		
 	}
 
 	private void OnDisable()
@@ -42,11 +47,6 @@ public class PCPlayer : MonoBehaviour
 		controls.FindAction($"{pc.actionMapName}Interact").performed -= Interact;
 	}
 
-	// Start is called before the first frame update
-	void Start()
-	{
-
-	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -92,7 +92,8 @@ public class PCPlayer : MonoBehaviour
 		// inputManager.SwitchActionMap(inputManager.GetActionMap("Player"));
 	}
 
-	private void TPBack() {
+	private void TPBack()
+	{
 		transform.position = tpTransform.position;
 	}
 
