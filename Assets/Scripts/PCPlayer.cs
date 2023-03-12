@@ -21,6 +21,18 @@ public class PCPlayer : MonoBehaviour
 	private IPCInteractable closestInteractable;
 	private IPCInteractable lastClosestInteractable;
 
+	public float walkSpeed = 1f;
+	public float sprintSpeed = 2f;
+	private float moveSpeed;
+	private float movementInputValue = 0f;
+	public MovementState movementState;
+	public enum MovementState
+	{
+		Idle,
+		Walking,
+		Sprinting
+	}
+
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -29,22 +41,49 @@ public class PCPlayer : MonoBehaviour
 		{
 			interactables.Add(go.GetComponent<IPCInteractable>());
 		}
+		movementState = MovementState.Idle;
+		moveSpeed = walkSpeed;
 	}
 
 	private void Start()
 	{
 		controls = InputManager.Instance.controls;
 		controls.FindAction($"{pc.actionMapName}Interact").performed += Interact;
+		controls.FindAction($"{pc.actionMapName}Sprint").started += SprintAction;
+		controls.FindAction($"{pc.actionMapName}Sprint").canceled += SprintAction;
 	}
 
 	private void OnEnable()
 	{
-		
+
 	}
 
 	private void OnDisable()
 	{
 		controls.FindAction($"{pc.actionMapName}Interact").performed -= Interact;
+		controls.FindAction($"{pc.actionMapName}Sprint").started -= SprintAction;
+		controls.FindAction($"{pc.actionMapName}Sprint").canceled -= SprintAction;
+	}
+
+	private void SprintAction(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			movementState = MovementState.Sprinting;
+			moveSpeed = sprintSpeed;
+		}
+		else if (context.canceled)
+		{
+			if (movementInputValue > 0)
+			{
+				movementState = MovementState.Walking;
+			}
+			else
+			{
+				movementState = MovementState.Idle;
+			}
+			moveSpeed = walkSpeed;
+		}
 	}
 
 
@@ -102,9 +141,9 @@ public class PCPlayer : MonoBehaviour
 	{
 		// Debug.Log("Movement: " + controls.PC1Player.Movement.ReadValue<Vector2>());
 		Vector2 inputVector = controls.FindAction($"{pc.actionMapName}Movement").ReadValue<Vector2>();
-		float speed = 1f;
-		float newVelocityX = Mathf.Lerp(rb.velocity.x, inputVector.x * speed, 10f * Time.deltaTime);
-		float newVelocityY = Mathf.Lerp(rb.velocity.y, inputVector.y * speed, 10f * Time.deltaTime);
+		movementInputValue = inputVector.magnitude;
+		float newVelocityX = Mathf.Lerp(rb.velocity.x, inputVector.x * moveSpeed, 10f * Time.deltaTime);
+		float newVelocityY = Mathf.Lerp(rb.velocity.y, inputVector.y * moveSpeed, 10f * Time.deltaTime);
 		rb.velocity = new Vector2(newVelocityX, newVelocityY);
 	}
 

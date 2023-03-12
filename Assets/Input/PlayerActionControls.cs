@@ -53,6 +53,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC1PlayerSprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""1fbd2e38-09cc-46a1-a785-6cef04cb9b13"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC1PlayerInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62786130-afad-40b2-baf7-c81b9d1d4ab5"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC1PlayerSprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -161,6 +181,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC2PlayerInteract"",
                     ""type"": ""Button"",
                     ""id"": ""8d87e8dd-11c5-43b7-8459-e3a4a7ab78bf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC2PlayerSprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""5de1a6d3-2be5-484e-b5a8-4cab719db0fb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -244,6 +273,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC2PlayerInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e47976f-f26e-4ba7-8cf2-3d866805df7b"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC2PlayerSprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -273,6 +313,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC3PlayerInteract"",
                     ""type"": ""Button"",
                     ""id"": ""a75d4879-cc30-4add-8567-42a5f3bbbd17"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC3PlayerSprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a6ea1c7-48e8-4e6d-a518-cbeb5e5c39e3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -356,6 +405,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC3PlayerInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39e02d8e-c5cb-494e-b124-3d7455baaaed"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC3PlayerSprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -385,6 +445,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC4PlayerInteract"",
                     ""type"": ""Button"",
                     ""id"": ""27ecd700-b74c-4a76-bd25-d45a0db62e73"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC4PlayerSprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""ef102756-8df8-4f08-a57d-0be2867d2fbc"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -468,6 +537,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""PC4PlayerInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f406ccb4-b058-4d05-a735-5b4d8b5fffef"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC4PlayerSprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -497,6 +577,15 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""PC5PlayerInteract"",
                     ""type"": ""Button"",
                     ""id"": ""92a96456-1ffa-4979-bdd5-0d881aeb8e4e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PC5PlayerSprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""19340f2b-7aa1-4456-acb3-d12a82e18158"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -578,6 +667,17 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""PC5PlayerInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ca883dc4-4db1-47c8-9b10-a72ac7fd669a"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PC5PlayerSprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -723,26 +823,31 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         m_PC1Player_PC1PlayerMovement = m_PC1Player.FindAction("PC1PlayerMovement", throwIfNotFound: true);
         m_PC1Player_PC1PlayerExit = m_PC1Player.FindAction("PC1PlayerExit", throwIfNotFound: true);
         m_PC1Player_PC1PlayerInteract = m_PC1Player.FindAction("PC1PlayerInteract", throwIfNotFound: true);
+        m_PC1Player_PC1PlayerSprint = m_PC1Player.FindAction("PC1PlayerSprint", throwIfNotFound: true);
         // PC2Player
         m_PC2Player = asset.FindActionMap("PC2Player", throwIfNotFound: true);
         m_PC2Player_PC2PlayerMovement = m_PC2Player.FindAction("PC2PlayerMovement", throwIfNotFound: true);
         m_PC2Player_PC2PlayerExit = m_PC2Player.FindAction("PC2PlayerExit", throwIfNotFound: true);
         m_PC2Player_PC2PlayerInteract = m_PC2Player.FindAction("PC2PlayerInteract", throwIfNotFound: true);
+        m_PC2Player_PC2PlayerSprint = m_PC2Player.FindAction("PC2PlayerSprint", throwIfNotFound: true);
         // PC3Player
         m_PC3Player = asset.FindActionMap("PC3Player", throwIfNotFound: true);
         m_PC3Player_PC3PlayerMovement = m_PC3Player.FindAction("PC3PlayerMovement", throwIfNotFound: true);
         m_PC3Player_PC3PlayerExit = m_PC3Player.FindAction("PC3PlayerExit", throwIfNotFound: true);
         m_PC3Player_PC3PlayerInteract = m_PC3Player.FindAction("PC3PlayerInteract", throwIfNotFound: true);
+        m_PC3Player_PC3PlayerSprint = m_PC3Player.FindAction("PC3PlayerSprint", throwIfNotFound: true);
         // PC4Player
         m_PC4Player = asset.FindActionMap("PC4Player", throwIfNotFound: true);
         m_PC4Player_PC4PlayerMovement = m_PC4Player.FindAction("PC4PlayerMovement", throwIfNotFound: true);
         m_PC4Player_PC4PlayerExit = m_PC4Player.FindAction("PC4PlayerExit", throwIfNotFound: true);
         m_PC4Player_PC4PlayerInteract = m_PC4Player.FindAction("PC4PlayerInteract", throwIfNotFound: true);
+        m_PC4Player_PC4PlayerSprint = m_PC4Player.FindAction("PC4PlayerSprint", throwIfNotFound: true);
         // PC5Player
         m_PC5Player = asset.FindActionMap("PC5Player", throwIfNotFound: true);
         m_PC5Player_PC5PlayerMovement = m_PC5Player.FindAction("PC5PlayerMovement", throwIfNotFound: true);
         m_PC5Player_PC5PlayerExit = m_PC5Player.FindAction("PC5PlayerExit", throwIfNotFound: true);
         m_PC5Player_PC5PlayerInteract = m_PC5Player.FindAction("PC5PlayerInteract", throwIfNotFound: true);
+        m_PC5Player_PC5PlayerSprint = m_PC5Player.FindAction("PC5PlayerSprint", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_PlayerMovement = m_Player.FindAction("PlayerMovement", throwIfNotFound: true);
@@ -811,6 +916,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private readonly InputAction m_PC1Player_PC1PlayerMovement;
     private readonly InputAction m_PC1Player_PC1PlayerExit;
     private readonly InputAction m_PC1Player_PC1PlayerInteract;
+    private readonly InputAction m_PC1Player_PC1PlayerSprint;
     public struct PC1PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
@@ -818,6 +924,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         public InputAction @PC1PlayerMovement => m_Wrapper.m_PC1Player_PC1PlayerMovement;
         public InputAction @PC1PlayerExit => m_Wrapper.m_PC1Player_PC1PlayerExit;
         public InputAction @PC1PlayerInteract => m_Wrapper.m_PC1Player_PC1PlayerInteract;
+        public InputAction @PC1PlayerSprint => m_Wrapper.m_PC1Player_PC1PlayerSprint;
         public InputActionMap Get() { return m_Wrapper.m_PC1Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -836,6 +943,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC1PlayerInteract.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerInteract;
                 @PC1PlayerInteract.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerInteract;
                 @PC1PlayerInteract.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerInteract;
+                @PC1PlayerSprint.started -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerSprint;
+                @PC1PlayerSprint.performed -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerSprint;
+                @PC1PlayerSprint.canceled -= m_Wrapper.m_PC1PlayerActionsCallbackInterface.OnPC1PlayerSprint;
             }
             m_Wrapper.m_PC1PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -849,6 +959,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC1PlayerInteract.started += instance.OnPC1PlayerInteract;
                 @PC1PlayerInteract.performed += instance.OnPC1PlayerInteract;
                 @PC1PlayerInteract.canceled += instance.OnPC1PlayerInteract;
+                @PC1PlayerSprint.started += instance.OnPC1PlayerSprint;
+                @PC1PlayerSprint.performed += instance.OnPC1PlayerSprint;
+                @PC1PlayerSprint.canceled += instance.OnPC1PlayerSprint;
             }
         }
     }
@@ -860,6 +973,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private readonly InputAction m_PC2Player_PC2PlayerMovement;
     private readonly InputAction m_PC2Player_PC2PlayerExit;
     private readonly InputAction m_PC2Player_PC2PlayerInteract;
+    private readonly InputAction m_PC2Player_PC2PlayerSprint;
     public struct PC2PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
@@ -867,6 +981,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         public InputAction @PC2PlayerMovement => m_Wrapper.m_PC2Player_PC2PlayerMovement;
         public InputAction @PC2PlayerExit => m_Wrapper.m_PC2Player_PC2PlayerExit;
         public InputAction @PC2PlayerInteract => m_Wrapper.m_PC2Player_PC2PlayerInteract;
+        public InputAction @PC2PlayerSprint => m_Wrapper.m_PC2Player_PC2PlayerSprint;
         public InputActionMap Get() { return m_Wrapper.m_PC2Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -885,6 +1000,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC2PlayerInteract.started -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerInteract;
                 @PC2PlayerInteract.performed -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerInteract;
                 @PC2PlayerInteract.canceled -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerInteract;
+                @PC2PlayerSprint.started -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerSprint;
+                @PC2PlayerSprint.performed -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerSprint;
+                @PC2PlayerSprint.canceled -= m_Wrapper.m_PC2PlayerActionsCallbackInterface.OnPC2PlayerSprint;
             }
             m_Wrapper.m_PC2PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -898,6 +1016,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC2PlayerInteract.started += instance.OnPC2PlayerInteract;
                 @PC2PlayerInteract.performed += instance.OnPC2PlayerInteract;
                 @PC2PlayerInteract.canceled += instance.OnPC2PlayerInteract;
+                @PC2PlayerSprint.started += instance.OnPC2PlayerSprint;
+                @PC2PlayerSprint.performed += instance.OnPC2PlayerSprint;
+                @PC2PlayerSprint.canceled += instance.OnPC2PlayerSprint;
             }
         }
     }
@@ -909,6 +1030,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private readonly InputAction m_PC3Player_PC3PlayerMovement;
     private readonly InputAction m_PC3Player_PC3PlayerExit;
     private readonly InputAction m_PC3Player_PC3PlayerInteract;
+    private readonly InputAction m_PC3Player_PC3PlayerSprint;
     public struct PC3PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
@@ -916,6 +1038,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         public InputAction @PC3PlayerMovement => m_Wrapper.m_PC3Player_PC3PlayerMovement;
         public InputAction @PC3PlayerExit => m_Wrapper.m_PC3Player_PC3PlayerExit;
         public InputAction @PC3PlayerInteract => m_Wrapper.m_PC3Player_PC3PlayerInteract;
+        public InputAction @PC3PlayerSprint => m_Wrapper.m_PC3Player_PC3PlayerSprint;
         public InputActionMap Get() { return m_Wrapper.m_PC3Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -934,6 +1057,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC3PlayerInteract.started -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerInteract;
                 @PC3PlayerInteract.performed -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerInteract;
                 @PC3PlayerInteract.canceled -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerInteract;
+                @PC3PlayerSprint.started -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerSprint;
+                @PC3PlayerSprint.performed -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerSprint;
+                @PC3PlayerSprint.canceled -= m_Wrapper.m_PC3PlayerActionsCallbackInterface.OnPC3PlayerSprint;
             }
             m_Wrapper.m_PC3PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -947,6 +1073,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC3PlayerInteract.started += instance.OnPC3PlayerInteract;
                 @PC3PlayerInteract.performed += instance.OnPC3PlayerInteract;
                 @PC3PlayerInteract.canceled += instance.OnPC3PlayerInteract;
+                @PC3PlayerSprint.started += instance.OnPC3PlayerSprint;
+                @PC3PlayerSprint.performed += instance.OnPC3PlayerSprint;
+                @PC3PlayerSprint.canceled += instance.OnPC3PlayerSprint;
             }
         }
     }
@@ -958,6 +1087,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private readonly InputAction m_PC4Player_PC4PlayerMovement;
     private readonly InputAction m_PC4Player_PC4PlayerExit;
     private readonly InputAction m_PC4Player_PC4PlayerInteract;
+    private readonly InputAction m_PC4Player_PC4PlayerSprint;
     public struct PC4PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
@@ -965,6 +1095,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         public InputAction @PC4PlayerMovement => m_Wrapper.m_PC4Player_PC4PlayerMovement;
         public InputAction @PC4PlayerExit => m_Wrapper.m_PC4Player_PC4PlayerExit;
         public InputAction @PC4PlayerInteract => m_Wrapper.m_PC4Player_PC4PlayerInteract;
+        public InputAction @PC4PlayerSprint => m_Wrapper.m_PC4Player_PC4PlayerSprint;
         public InputActionMap Get() { return m_Wrapper.m_PC4Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -983,6 +1114,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC4PlayerInteract.started -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerInteract;
                 @PC4PlayerInteract.performed -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerInteract;
                 @PC4PlayerInteract.canceled -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerInteract;
+                @PC4PlayerSprint.started -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerSprint;
+                @PC4PlayerSprint.performed -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerSprint;
+                @PC4PlayerSprint.canceled -= m_Wrapper.m_PC4PlayerActionsCallbackInterface.OnPC4PlayerSprint;
             }
             m_Wrapper.m_PC4PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -996,6 +1130,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC4PlayerInteract.started += instance.OnPC4PlayerInteract;
                 @PC4PlayerInteract.performed += instance.OnPC4PlayerInteract;
                 @PC4PlayerInteract.canceled += instance.OnPC4PlayerInteract;
+                @PC4PlayerSprint.started += instance.OnPC4PlayerSprint;
+                @PC4PlayerSprint.performed += instance.OnPC4PlayerSprint;
+                @PC4PlayerSprint.canceled += instance.OnPC4PlayerSprint;
             }
         }
     }
@@ -1007,6 +1144,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private readonly InputAction m_PC5Player_PC5PlayerMovement;
     private readonly InputAction m_PC5Player_PC5PlayerExit;
     private readonly InputAction m_PC5Player_PC5PlayerInteract;
+    private readonly InputAction m_PC5Player_PC5PlayerSprint;
     public struct PC5PlayerActions
     {
         private @PlayerActionControls m_Wrapper;
@@ -1014,6 +1152,7 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         public InputAction @PC5PlayerMovement => m_Wrapper.m_PC5Player_PC5PlayerMovement;
         public InputAction @PC5PlayerExit => m_Wrapper.m_PC5Player_PC5PlayerExit;
         public InputAction @PC5PlayerInteract => m_Wrapper.m_PC5Player_PC5PlayerInteract;
+        public InputAction @PC5PlayerSprint => m_Wrapper.m_PC5Player_PC5PlayerSprint;
         public InputActionMap Get() { return m_Wrapper.m_PC5Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1032,6 +1171,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC5PlayerInteract.started -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerInteract;
                 @PC5PlayerInteract.performed -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerInteract;
                 @PC5PlayerInteract.canceled -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerInteract;
+                @PC5PlayerSprint.started -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerSprint;
+                @PC5PlayerSprint.performed -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerSprint;
+                @PC5PlayerSprint.canceled -= m_Wrapper.m_PC5PlayerActionsCallbackInterface.OnPC5PlayerSprint;
             }
             m_Wrapper.m_PC5PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1045,6 +1187,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @PC5PlayerInteract.started += instance.OnPC5PlayerInteract;
                 @PC5PlayerInteract.performed += instance.OnPC5PlayerInteract;
                 @PC5PlayerInteract.canceled += instance.OnPC5PlayerInteract;
+                @PC5PlayerSprint.started += instance.OnPC5PlayerSprint;
+                @PC5PlayerSprint.performed += instance.OnPC5PlayerSprint;
+                @PC5PlayerSprint.canceled += instance.OnPC5PlayerSprint;
             }
         }
     }
@@ -1111,30 +1256,35 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         void OnPC1PlayerMovement(InputAction.CallbackContext context);
         void OnPC1PlayerExit(InputAction.CallbackContext context);
         void OnPC1PlayerInteract(InputAction.CallbackContext context);
+        void OnPC1PlayerSprint(InputAction.CallbackContext context);
     }
     public interface IPC2PlayerActions
     {
         void OnPC2PlayerMovement(InputAction.CallbackContext context);
         void OnPC2PlayerExit(InputAction.CallbackContext context);
         void OnPC2PlayerInteract(InputAction.CallbackContext context);
+        void OnPC2PlayerSprint(InputAction.CallbackContext context);
     }
     public interface IPC3PlayerActions
     {
         void OnPC3PlayerMovement(InputAction.CallbackContext context);
         void OnPC3PlayerExit(InputAction.CallbackContext context);
         void OnPC3PlayerInteract(InputAction.CallbackContext context);
+        void OnPC3PlayerSprint(InputAction.CallbackContext context);
     }
     public interface IPC4PlayerActions
     {
         void OnPC4PlayerMovement(InputAction.CallbackContext context);
         void OnPC4PlayerExit(InputAction.CallbackContext context);
         void OnPC4PlayerInteract(InputAction.CallbackContext context);
+        void OnPC4PlayerSprint(InputAction.CallbackContext context);
     }
     public interface IPC5PlayerActions
     {
         void OnPC5PlayerMovement(InputAction.CallbackContext context);
         void OnPC5PlayerExit(InputAction.CallbackContext context);
         void OnPC5PlayerInteract(InputAction.CallbackContext context);
+        void OnPC5PlayerSprint(InputAction.CallbackContext context);
     }
     public interface IPlayerActions
     {

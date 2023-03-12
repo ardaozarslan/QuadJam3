@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PC1PlayerSprint",
+                    "type": "Button",
+                    "id": "1fbd2e38-09cc-46a1-a785-6cef04cb9b13",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -110,6 +119,17 @@
                     "action": "PC1PlayerInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62786130-afad-40b2-baf7-c81b9d1d4ab5",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC1PlayerSprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -139,6 +159,15 @@
                     "name": "PC2PlayerInteract",
                     "type": "Button",
                     "id": "8d87e8dd-11c5-43b7-8459-e3a4a7ab78bf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC2PlayerSprint",
+                    "type": "Button",
+                    "id": "5de1a6d3-2be5-484e-b5a8-4cab719db0fb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -222,6 +251,17 @@
                     "action": "PC2PlayerInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e47976f-f26e-4ba7-8cf2-3d866805df7b",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC2PlayerSprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -251,6 +291,15 @@
                     "name": "PC3PlayerInteract",
                     "type": "Button",
                     "id": "a75d4879-cc30-4add-8567-42a5f3bbbd17",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC3PlayerSprint",
+                    "type": "Button",
+                    "id": "2a6ea1c7-48e8-4e6d-a518-cbeb5e5c39e3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -334,6 +383,17 @@
                     "action": "PC3PlayerInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39e02d8e-c5cb-494e-b124-3d7455baaaed",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC3PlayerSprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -363,6 +423,15 @@
                     "name": "PC4PlayerInteract",
                     "type": "Button",
                     "id": "27ecd700-b74c-4a76-bd25-d45a0db62e73",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC4PlayerSprint",
+                    "type": "Button",
+                    "id": "ef102756-8df8-4f08-a57d-0be2867d2fbc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -446,6 +515,17 @@
                     "action": "PC4PlayerInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f406ccb4-b058-4d05-a735-5b4d8b5fffef",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC4PlayerSprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -475,6 +555,15 @@
                     "name": "PC5PlayerInteract",
                     "type": "Button",
                     "id": "92a96456-1ffa-4979-bdd5-0d881aeb8e4e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PC5PlayerSprint",
+                    "type": "Button",
+                    "id": "19340f2b-7aa1-4456-acb3-d12a82e18158",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -556,6 +645,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PC5PlayerInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca883dc4-4db1-47c8-9b10-a72ac7fd669a",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PC5PlayerSprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
