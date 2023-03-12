@@ -26,4 +26,12 @@ public class Instanceton<T> : MonoBehaviour where T : Component
 			return _instance;
 		}
 	}
+
+	public static bool IsInitialized
+	{
+		get
+		{
+			return _instance != null;
+		}
+	}
 }

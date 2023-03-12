@@ -47,4 +47,14 @@ public class GameManager : Singleton<GameManager>
 	{
 		DOTween.KillAll();
 	}
+
+
+	public void LoadGame() {
+		Debug.Log("ALOOOOO");
+		SceneManager.LoadScene("StartingScene");
+	}
+
+	public void LoadGameOverScene() {
+		SceneManager.LoadScene("GameOver");
+	}
 }

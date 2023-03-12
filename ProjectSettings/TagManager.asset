@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - PC1Interact
   - PCInteractable
+  - GameOver
   layers:
   - Default
   - TransparentFX

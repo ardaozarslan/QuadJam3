@@ -44,11 +44,11 @@ public class Ornament : MonoBehaviour, IInteractable
 
 	public void Summon()
 	{
-		interactTriggerCollider.enabled = true;
 		transform.DOLocalRotate(new Vector3(0, 180, 0), 3f).SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear);
-		outline.enabled = true;
-		transform.DOLocalMoveY(1.58f, 1.5f).OnComplete(() =>
+		transform.DOLocalMoveY(1.58f, 0.5f).OnComplete(() =>
 		{
+			outline.enabled = true;
+			interactTriggerCollider.enabled = true;
 			transform.DOLocalMoveY(1.38f, 1.5f).SetLoops(-1, LoopType.Yoyo);
 		});
 	}

@@ -38,7 +38,14 @@ public class PlayerTextCanvasManager : Instanceton<PlayerTextCanvasManager>
 		transform.DOKill();
 		transform.DOScale(1, 0.1f).SetEase(Ease.InQuad);
 
-		int soundPlayCount = Mathf.CeilToInt(playerText.Length * 2 / 3);
+		int soundPlayCount = 0;
+		if (playerText.IndexOf("<sprite=0>") != -1) {
+			soundPlayCount = Mathf.CeilToInt((playerText.Length - 9) * 2 / 3);
+		}
+		else {
+			soundPlayCount = Mathf.CeilToInt(playerText.Length * 2 / 3);
+		}
+
 		if (soundCoroutine != null) {
 			StopCoroutine(soundCoroutine);
 		}
@@ -48,7 +55,14 @@ public class PlayerTextCanvasManager : Instanceton<PlayerTextCanvasManager>
 		// bool playSound = true;
 		for (int j = 0; j < playerText.Length; j++)
 		{
-			playerTextObject.text += playerText[j];
+			if (playerText.IndexOf("<sprite=0>") == j) {
+				j += 9;
+				playerTextObject.text += "<sprite=0>";
+			}
+			else {
+				playerTextObject.text += playerText[j];
+			}
+
 			yield return new WaitForSeconds(0.05f);
 		}
 		yield return new WaitForSeconds(2.5f);
@@ -60,7 +74,7 @@ public class PlayerTextCanvasManager : Instanceton<PlayerTextCanvasManager>
 	{
 		for (int i = 0; i < soundPlayCount; i++)
 		{
-			AudioManager.Instance.PlayRandomNarratorAudio(1f);
+			AudioManager.Instance.PlayNarratorAudio(1, 1f);
 			yield return new WaitForSeconds(0.075f);
 		}
 		yield return null;

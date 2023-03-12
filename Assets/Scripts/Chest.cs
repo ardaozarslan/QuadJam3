@@ -46,7 +46,7 @@ public class Chest : MonoBehaviour, IInteractable
 	public void CloseChest()
 	{
 		interactTriggerCollider.enabled = false;
-		lid.transform.DOLocalRotateQuaternion(Quaternion.Euler(0, 0, 0), 1.0f).OnComplete(() =>
+		lid.transform.DOLocalRotateQuaternion(Quaternion.Euler(0, 0, 0), 1.0f).SetEase(Ease.InQuad).OnComplete(() =>
 		{
 			if (ornamentCount < assignmentOrnamentCount)
 			{
@@ -85,9 +85,7 @@ public class Chest : MonoBehaviour, IInteractable
 		else
 		{
 			Debug.Log("Game Over");
-			Utils.WaitForSecondsAndInvoke(2f, () => {
-				GameManager.Instance.LoadNextScene();
-			});
+			NarratorTextCanvasManager.Instance.ShowSuccessText();
 		}
 	}
 }

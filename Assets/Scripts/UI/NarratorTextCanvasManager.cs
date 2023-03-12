@@ -54,11 +54,50 @@ public class NarratorTextCanvasManager : Instanceton<NarratorTextCanvasManager>
 
 	}
 
+	public void ShowSuccessText()
+	{
+		StartCoroutine(ShowSuccessTextCoroutine());
+	}
+
+	private IEnumerator ShowSuccessTextCoroutine()
+	{
+		narratorTextObject.text = "";
+		transform.DOScale(1, 0.1f).SetEase(Ease.InQuad);
+
+		// yield return new WaitForSeconds(2f);
+
+		List<string> successTexts = new List<string>() {
+			"Loop Success...",
+			"System Rebooting..."
+		};
+
+		for (int i = 0; i < successTexts.Count; i++)
+		{
+			string currentNarratorText = successTexts[i];
+			narratorTextObject.text = "";
+			int soundPlayCount = Mathf.CeilToInt(currentNarratorText.Length * 2 / 3);
+			StartCoroutine(PlaySoundCoroutine(soundPlayCount));
+
+			// bool playSound = true;
+			for (int j = 0; j < currentNarratorText.Length; j++)
+			{
+				narratorTextObject.text += currentNarratorText[j];
+				yield return new WaitForSeconds(0.05f);
+			}
+			yield return new WaitForSeconds(1.0f);
+		}
+
+		// DOTween.To(() => narratorTextCanvasGroup.alpha, x => narratorTextCanvasGroup.alpha = x, 0, 0.2f).SetEase(Ease.InQuad);
+		narratorTextCanvasGroup.alpha = 0;
+		transform.DOScale(10, 1f).SetEase(Ease.Linear).OnComplete(() => GameManager.Instance.LoadNextScene());
+
+	}
+
 	private IEnumerator PlaySoundCoroutine(int soundPlayCount)
 	{
 		for (int i = 0; i < soundPlayCount; i++)
 		{
-			AudioManager.Instance.PlayRandomNarratorAudio(UnityEngine.Random.Range(0.5f, 1.2f));
+			AudioManager.Instance.PlayNarratorAudio(0, UnityEngine.Random.Range(0.5f, 1.2f));
 			yield return new WaitForSeconds(0.075f);
 		}
 		yield return null;

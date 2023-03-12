@@ -34,6 +34,7 @@ public class Player : Instanceton<Player>
 	private float movementInputValue = 0f;
 	public float jumpForce = 5f;
 	public bool isGrounded = true;
+	public bool allowJump = false;
 
 	public InventoryManager inventoryManager;
 
@@ -109,7 +110,7 @@ public class Player : Instanceton<Player>
 			}
 			else
 			{
-				if (isGrounded)
+				if (isGrounded && allowJump)
 				{
 					rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 					isGrounded = false;
@@ -238,6 +239,15 @@ public class Player : Instanceton<Player>
 			// Debug.Log("NE ALAKA???");
 			animator.SetBool("isWalking", false);
 			animator.SetBool("isSprinting", false);
+		}
+	}
+
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("GameOver"))
+		{
+			GameManager.Instance.LoadGameOverScene();
 		}
 	}
 }

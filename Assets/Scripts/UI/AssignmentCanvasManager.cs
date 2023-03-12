@@ -39,7 +39,7 @@ public class AssignmentCanvasManager : Instanceton<AssignmentCanvasManager>
 	{
 		for (int i = 0; i < soundPlayCount; i++)
 		{
-			AudioManager.Instance.PlayRandomNarratorAudio();
+			AudioManager.Instance.PlayNarratorAudio(0);
 			yield return new WaitForSeconds(0.075f);
 		}
 		yield return null;

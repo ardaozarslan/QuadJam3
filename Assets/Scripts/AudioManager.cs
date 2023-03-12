@@ -7,17 +7,37 @@ public class AudioManager : Singleton<AudioManager>
 {
 	[ReorderableList]
 	public List<AudioClip> narratorAudioClips = new List<AudioClip>();
-	public AudioSource narratorAudioSource;
 
-	private void Start() {
-		narratorAudioSource = Player.Instance.playerAudioSource.GetComponent<AudioSource>();
+
+	private Transform parentAudioSource;
+
+	private void Start()
+	{
+		InitAudioParent();
+	}
+
+	private void InitAudioParent()
+	{
+		if (Player.IsInitialized)
+		{
+			parentAudioSource = Player.Instance.playerAudioSource.transform;
+		}
+		else
+		{
+			GameObject newParent = new GameObject("NewParent");
+			parentAudioSource = newParent.transform;
+		}
 	}
 
 	public void PlayNarratorAudio(int index, float pitchCenter = 1f)
 	{
+		if (parentAudioSource == null)
+		{
+			InitAudioParent();
+		}
 		GameObject newNarratorAudioSource = new GameObject("NarratorAudioSource");
-		newNarratorAudioSource.transform.parent = Player.Instance.playerAudioSource.transform;
-		newNarratorAudioSource.transform.position = Player.Instance.playerAudioSource.transform.position;
+		newNarratorAudioSource.transform.parent = parentAudioSource;
+		newNarratorAudioSource.transform.position = parentAudioSource.position;
 		newNarratorAudioSource.AddComponent<AudioSource>();
 		newNarratorAudioSource.GetComponent<AudioSource>().clip = narratorAudioClips[index];
 		newNarratorAudioSource.GetComponent<AudioSource>().pitch = Random.Range(pitchCenter - 0.1f, pitchCenter + 0.1f);

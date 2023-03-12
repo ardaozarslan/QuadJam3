@@ -97,7 +97,7 @@ public class PC : MonoBehaviour, IInteractable
 		{
 			rb.isKinematic = false;
 
-			if (!loopTriggered)
+			if (!loopTriggered && isCompleted)
 			{
 				loopTriggered = true;
 				ActivateLoop();
@@ -147,6 +147,20 @@ public class PC : MonoBehaviour, IInteractable
 					{
 						PlayerTextCanvasManager.Instance.ShowPlayerText(GameManager.Instance.playerJumpPositiveTexts[PCManager.Instance.endGameTextIndex]);
 						PCManager.Instance.endGameTextIndex++;
+						if (PCManager.Instance.endGameTextIndex == PCManager.Instance.pcs.Count)
+						{
+							Utils.WaitForSecondsAndInvoke(4f, () =>
+							{
+								PlayerTextCanvasManager.Instance.ShowPlayerText(GameManager.Instance.playerJumpPositiveTexts[PCManager.Instance.endGameTextIndex]);
+								PCManager.Instance.endGameTextIndex++;
+								Utils.WaitForSecondsAndInvoke(4f, () =>
+								{
+									PlayerTextCanvasManager.Instance.ShowPlayerText(GameManager.Instance.playerJumpPositiveTexts[PCManager.Instance.endGameTextIndex]);
+									PCManager.Instance.endGameTextIndex++;
+									Player.Instance.allowJump = true;
+								});
+							});
+						}
 					}
 					break;
 				default:
