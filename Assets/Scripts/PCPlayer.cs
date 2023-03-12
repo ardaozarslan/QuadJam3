@@ -21,6 +21,8 @@ public class PCPlayer : MonoBehaviour
 	private IPCInteractable closestInteractable;
 	private IPCInteractable lastClosestInteractable;
 
+	public Animator animator;
+
 	public float walkSpeed = 1f;
 	public float sprintSpeed = 2f;
 	private float moveSpeed;
@@ -36,6 +38,11 @@ public class PCPlayer : MonoBehaviour
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
+		if (animator != null)
+		{
+			animator.enabled = false;
+		}
 		inputManager = InputManager.Instance;
 		foreach (GameObject go in interactableGameObjects)
 		{
@@ -47,6 +54,10 @@ public class PCPlayer : MonoBehaviour
 
 	private void Start()
 	{
+		pc.pcPlayer = this;
+		if (GameManager.Instance.sceneNumber == 3 && pc.actionMapName == "PC1Player") {
+			GetComponent<SpriteRenderer>().color = Color.black;
+		}
 		controls = InputManager.Instance.controls;
 		controls.FindAction($"{pc.actionMapName}Interact").performed += Interact;
 		controls.FindAction($"{pc.actionMapName}Sprint").started += SprintAction;

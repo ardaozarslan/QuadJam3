@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class AssignmentCanvasManager : Singleton<AssignmentCanvasManager>
+public class AssignmentCanvasManager : Instanceton<AssignmentCanvasManager>
 {
 
 	public TextMeshProUGUI assignmentObject;
@@ -58,9 +58,9 @@ public class AssignmentCanvasManager : Singleton<AssignmentCanvasManager>
 		{
 			assignmentObject.text = "<s>" + completedAssignmentText.Substring(0, characterIndex + 1) + "</s>" + completedAssignmentText.Substring(characterIndex + 1);
 			characterIndex++;
-			yield return new WaitForSeconds(0.03f);
+			yield return new WaitForSeconds(0.015f);
 		}
-		yield return new WaitForSeconds(2.5f);
+		yield return new WaitForSeconds(1.0f);
 
 		if (AssignmentManager.Instance.CurrentAssignment != null)
 		{

@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class OrnamentCanvasManager : Singleton<OrnamentCanvasManager>
+public class OrnamentCanvasManager : Instanceton<OrnamentCanvasManager>
 {
 	public CanvasGroup ornamentCanvasGroup;
+
+	private void Start() {
+		ornamentCanvasGroup = GetComponent<CanvasGroup>();
+	}
 
     public void ShowOrnamentCanvas()
 	{

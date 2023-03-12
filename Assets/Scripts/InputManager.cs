@@ -4,14 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputManager : Singleton<InputManager>
+public class InputManager : Instanceton<InputManager>
 {
 	public PlayerActionControls controls;
 	public event Action<InputActionMap> actionMapChange;
 
 	public InputActionMap currentActionMap;
-
-	public GameObject crosshair;
 
 	private void OnEnable()
 	{
@@ -71,10 +69,10 @@ public class InputManager : Singleton<InputManager>
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 
-			crosshair.SetActive(true);
+			UIManager.Instance.crosshair.SetActive(true);
 		}
 		else {
-			crosshair.SetActive(false);
+			UIManager.Instance.crosshair.SetActive(false);
 		}
 		// else if (currentActionMap == controls.PC1Player.Get())
 		// {
@@ -100,6 +98,7 @@ public class InputManager : Singleton<InputManager>
 
 	public void TemporarilyDisableCurrentActionMap()
 	{
+		Debug.Log("TemporarilyDisableCurrentActionMap");
 		currentActionMap.Disable();
 	}
 

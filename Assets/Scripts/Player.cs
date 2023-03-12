@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : Singleton<Player>
+public class Player : Instanceton<Player>
 {
 	public PlayerActionControls controls;
 	private Rigidbody rb;
@@ -19,6 +19,8 @@ public class Player : Singleton<Player>
 
 	public GameObject playerAudioSource;
 
+	public bool isHoldingOrnament = false;
+
 	[Header("Movement")]
 	public float xRotation;
 	public float yRotation;
@@ -30,8 +32,12 @@ public class Player : Singleton<Player>
 	public float sprintSpeed = 10f;
 	private Vector3 moveDirection;
 	private float movementInputValue = 0f;
+	public float jumpForce = 5f;
+	public bool isGrounded = true;
 
 	public InventoryManager inventoryManager;
+
+	// public int endGameTextIndex = 0;
 
 	public Transform eyesTransform;
 
@@ -61,6 +67,7 @@ public class Player : Singleton<Player>
 		controls.Player.PlayerSprint.started += SprintAction;
 		controls.Player.PlayerSprint.canceled += SprintAction;
 		controls.Player.PlayerInteract.performed += InteractAction;
+		controls.Player.PlayerJump.started += JumpInteraction;
 	}
 
 	private void OnDisable()
@@ -68,6 +75,48 @@ public class Player : Singleton<Player>
 		controls.Player.PlayerSprint.started -= SprintAction;
 		controls.Player.PlayerSprint.canceled -= SprintAction;
 		controls.Player.PlayerInteract.performed -= InteractAction;
+		controls.Player.PlayerJump.started -= JumpInteraction;
+	}
+
+	private void FixedUpdate()
+	{
+		// shoot raycast
+		RaycastHit hit;
+		int layerMask = 1 << 9;
+		// shoot a raycast that only hits colliders with the "Ground" layer and also ignore triggers
+		if (Physics.Raycast(transform.position + Vector3.up * 0.4f, Vector3.down, out hit, 0.5f, layerMask, QueryTriggerInteraction.Ignore))
+		{
+			isGrounded = true;
+			// animator.SetBool("isGrounded", true);
+		}
+		else
+		{
+			isGrounded = false;
+			rb.AddForce(Vector3.down * 10f, ForceMode.Acceleration);
+			// animator.SetBool("isGrounded", false);
+		}
+	}
+
+
+	private void JumpInteraction(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			if (GameManager.Instance.sceneNumber != 3)
+			{
+				// Debug.Log("Say negative text: " + GameManager.Instance.playerJumpNegativeTexts[UnityEngine.Random.Range(0, GameManager.Instance.playerJumpNegativeTexts.Count)]);
+				PlayerTextCanvasManager.Instance.ShowPlayerText(GameManager.Instance.playerJumpNegativeTexts[UnityEngine.Random.Range(0, GameManager.Instance.playerJumpNegativeTexts.Count)]);
+			}
+			else
+			{
+				if (isGrounded)
+				{
+					rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+					isGrounded = false;
+					// animator.SetBool("isGrounded", false);
+				}
+			}
+		}
 	}
 
 	private void SprintAction(InputAction.CallbackContext context)

@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PCManager : Singleton<PCManager>
+public class PCManager : Instanceton<PCManager>
 {
 	public List<PC> pcs = new List<PC>();
 
 	private InputManager inputManager;
 	private PlayerActionControls controls;
 	private Player player;
+
+	public int endGameTextIndex = 0;
 
 	private void Awake()
 	{
@@ -75,12 +77,17 @@ public class PCManager : Singleton<PCManager>
 		if (!succeeded)
 		{
 			pcs[pcs.Count - 1].isCompleted = true;
+			pcs[pcs.Count - 1].ExitedFromThis();
+			InputManager.Instance.SwitchActionMap(inputManager.GetActionMap("Player"));
 			return;
 		}
 		PC pc = pcs[deneme - 1];
 		pc.isAvailable = true;
+		pc.outline.enabled = true;
 		PC previousPC = pcs[deneme - 2];
 		// previousPC.ActivateLightsAndCogs();
 		previousPC.isCompleted = true;
+		pcs[deneme - 2].ExitedFromThis();
+		InputManager.Instance.SwitchActionMap(inputManager.GetActionMap("Player"));
 	}
 }

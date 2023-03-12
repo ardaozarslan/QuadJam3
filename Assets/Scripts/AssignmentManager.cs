@@ -34,7 +34,7 @@ public class Assignment
 	}
 }
 
-public class AssignmentManager : Singleton<AssignmentManager>
+public class AssignmentManager : Instanceton<AssignmentManager>
 {
 	[ReorderableList]
 	public List<AssignmentSO> assignmentSOs = new List<AssignmentSO>();

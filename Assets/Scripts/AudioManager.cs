@@ -13,14 +13,14 @@ public class AudioManager : Singleton<AudioManager>
 		narratorAudioSource = Player.Instance.playerAudioSource.GetComponent<AudioSource>();
 	}
 
-	public void PlayNarratorAudio(int index)
+	public void PlayNarratorAudio(int index, float pitchCenter = 1f)
 	{
 		GameObject newNarratorAudioSource = new GameObject("NarratorAudioSource");
 		newNarratorAudioSource.transform.parent = Player.Instance.playerAudioSource.transform;
 		newNarratorAudioSource.transform.position = Player.Instance.playerAudioSource.transform.position;
 		newNarratorAudioSource.AddComponent<AudioSource>();
 		newNarratorAudioSource.GetComponent<AudioSource>().clip = narratorAudioClips[index];
-		newNarratorAudioSource.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+		newNarratorAudioSource.GetComponent<AudioSource>().pitch = Random.Range(pitchCenter - 0.1f, pitchCenter + 0.1f);
 		// newNarratorAudioSource.AddComponent<AudioEchoFilter>();
 		// newNarratorAudioSource.GetComponent<AudioEchoFilter>().delay = 10;
 		// newNarratorAudioSource.GetComponent<AudioEchoFilter>().decayRatio = 0.88f;
@@ -30,8 +30,8 @@ public class AudioManager : Singleton<AudioManager>
 		Destroy(newNarratorAudioSource, 1f);
 	}
 
-	public void PlayRandomNarratorAudio()
+	public void PlayRandomNarratorAudio(float pitchCenter = 1f)
 	{
-		PlayNarratorAudio(Random.Range(0, narratorAudioClips.Count));
+		PlayNarratorAudio(Random.Range(0, narratorAudioClips.Count), pitchCenter);
 	}
 }

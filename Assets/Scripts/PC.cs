@@ -29,11 +29,20 @@ public class PC : MonoBehaviour, IInteractable
 	private PlayerActionControls controls;
 	private Player player;
 
+	public PCPlayer pcPlayer;
+
 	public bool isAvailable = false;
 	private bool isUnlocked = false;
 
 	public bool lightsAndCogsTriggered = false;
 	public bool isCompleted = false;
+	public bool loopTriggered = false;
+
+	public Outline outline;
+
+	public Material gearsMaterial;
+
+	public Tween tweenToKill;
 
 	private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> playerPositionTween;
 
@@ -56,12 +65,22 @@ public class PC : MonoBehaviour, IInteractable
 		smallCog.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
 
 		sigil.transform.DOLocalMoveZ(0.5f, 0.0f);
+
+		outline = gameObject.AddComponent<Outline>();
+		outline.OutlineMode = Outline.Mode.OutlineAll;
+		outline.OutlineColor = Color.yellow;
+		outline.OutlineWidth = 5f;
+		outline.enabled = false;
 	}
 
 	void Start()
 	{
 		screenOff.SetActive(true);
 		screenOn.SetActive(false);
+		if (actionMapName == "PC1Player")
+		{
+			outline.enabled = true;
+		}
 	}
 
 	public void ExitedFromThis()
@@ -77,12 +96,27 @@ public class PC : MonoBehaviour, IInteractable
 		playerPositionTween.OnComplete(() =>
 		{
 			rb.isKinematic = false;
+
+			if (!loopTriggered)
+			{
+				loopTriggered = true;
+				ActivateLoop();
+			}
 		});
 
 		if (isCompleted && !lightsAndCogsTriggered)
 		{
 			ActivateLightsAndCogs();
 		}
+		if (isCompleted)
+		{
+			isAvailable = false;
+		}
+	}
+
+	public void ActivateLoop()
+	{
+		screenOn.GetComponent<MeshRenderer>().material = gearsMaterial;
 	}
 
 	public void Interact()
@@ -94,6 +128,7 @@ public class PC : MonoBehaviour, IInteractable
 		if (!isUnlocked)
 		{
 			isUnlocked = true;
+			outline.enabled = false;
 			screenOff.SetActive(false);
 			screenOn.SetActive(true);
 			if (actionMapName == "PC1Player")
@@ -101,6 +136,21 @@ public class PC : MonoBehaviour, IInteractable
 				bool activatedNextAssignment = false;
 				AssignmentManager.Instance.ActivateNextAssignment(ref activatedNextAssignment);
 				AssignmentCanvasManager.Instance.ShowAssignment(AssignmentManager.Instance.CurrentAssignment.name);
+			}
+
+			switch (GameManager.Instance.sceneNumber)
+			{
+				case 2:
+					break;
+				case 3:
+					if (PCManager.Instance.pcs.IndexOf(this) == PCManager.Instance.endGameTextIndex)
+					{
+						PlayerTextCanvasManager.Instance.ShowPlayerText(GameManager.Instance.playerJumpPositiveTexts[PCManager.Instance.endGameTextIndex]);
+						PCManager.Instance.endGameTextIndex++;
+					}
+					break;
+				default:
+					break;
 			}
 
 			switch (actionMapName)
@@ -156,7 +206,26 @@ public class PC : MonoBehaviour, IInteractable
 
 
 
+		if (GameManager.Instance.sceneNumber == 2)
+		{
+			if (actionMapName == "PC1Player")
+			{
+				pcPlayer.animator.enabled = true;
+				InputManager.Instance.TemporarilyDisableCurrentActionMap();
+				UIManager.Instance.crosshair.SetActive(false);
+				Utils.WaitForSecondsAndInvoke(2f, () =>
+				{
+					pcPlayer.animator.SetTrigger("jump");
+					Utils.WaitForSecondsAndInvoke(5f, () =>
+					{
 
+						NarratorTextCanvasManager.Instance.ShowNarratorText();
+					});
+
+				});
+				return;
+			}
+		}
 		InputManager.Instance.SwitchActionMap(inputManager.GetActionMap(actionMapName));
 	}
 
@@ -176,17 +245,24 @@ public class PC : MonoBehaviour, IInteractable
 			smallCog.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f) * pillarEmissionIntensity / 3f;
 		}).OnComplete(() =>
 		{
-			DOTween.To(() => pillarEmissionIntensity, x => pillarEmissionIntensity = x, 1.75f, 1.75f).SetLoops(-1, LoopType.Yoyo).OnUpdate(() =>
+			tweenToKill = DOTween.To(() => pillarEmissionIntensity, x => pillarEmissionIntensity = x, 1.75f, 1.75f).SetLoops(-1, LoopType.Yoyo).OnUpdate(() =>
 			{
 				foreach (var pillar in pillarObjects)
 				{
-					pillar.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(1f, 1f, 1f) * pillarEmissionIntensity);
+					if (pillar != null)
+					{
+						pillar.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(1f, 1f, 1f) * pillarEmissionIntensity);
+					}
 				}
-				sigil.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(1f, 1f, 1f) * pillarEmissionIntensity);
+				if (sigil != null)
+				{
+					sigil.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(1f, 1f, 1f) * pillarEmissionIntensity);
+				}
 			});
 
 		});
-		sigil.transform.DOLocalMoveZ(0.8f, 3f).OnComplete(() => {
+		sigil.transform.DOLocalMoveZ(0.8f, 3f).OnComplete(() =>
+		{
 			sigil.GetComponent<Sigil>().ActivateSigil();
 		});
 	}

@@ -76,7 +76,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -418,6 +418,10 @@ MonoBehaviour:
   pc: {fileID: 0}
   tpTransform: {fileID: 0}
   interactableGameObjects: []
+  animator: {fileID: 0}
+  walkSpeed: 1
+  sprintSpeed: 2
+  movementState: 0
 --- !u!58 &4817932146376791957
 CircleCollider2D:
   m_ObjectHideFlags: 0

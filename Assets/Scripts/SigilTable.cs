@@ -9,7 +9,7 @@ public class SigilTable : MonoBehaviour
 	[ReorderableList]
 	public List<Sigil> sigils = new List<Sigil>();
 
-	public GameObject ornament;
+	public Ornament ornament;
 
 	public bool isCrafting = false;
 
@@ -46,16 +46,26 @@ public class SigilTable : MonoBehaviour
 	private void Craft()
 	{
 		isCrafting = true;
-		Utils.WaitForSecondsAndInvoke(0.5f, () =>
+		Utils.WaitForSecondsAndInvoke(0.1f, () =>
 		{
-			ornament.transform.DOLocalRotate(new Vector3(0, 180, 0), 3f).SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear);
-			ornament.transform.DOLocalMoveY(1.58f, 3f).OnComplete(() =>
-			{
-				ornament.transform.DOLocalMoveY(1.38f, 1.5f).SetLoops(-1, LoopType.Yoyo);
-
-			});
+			ornament.Summon();
 		});
 
 
+	}
+
+	public void ActivateSigilOutlines() {
+		foreach (Sigil sigil in sigils)
+		{
+			sigil.outline.enabled = true;
+		}
+	}
+
+	public void ResetSigilTable()
+	{
+		foreach (Sigil sigil in sigils)
+		{
+			sigil.ResetSigil();
+		}
 	}
 }

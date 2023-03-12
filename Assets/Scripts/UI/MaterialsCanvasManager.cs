@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class MaterialsCanvasManager : Singleton<MaterialsCanvasManager>
+public class MaterialsCanvasManager : Instanceton<MaterialsCanvasManager>
 {
 
 	public GameObject berryText;

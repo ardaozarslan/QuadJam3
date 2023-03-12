@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb1536cd12970c449bc00d8fae0be747, type: 3}
-  m_Name: Craft 5 ITEM
+  m_Name: Craft 3 Ornaments
   m_EditorClassIdentifier: 
-  name: Craft 5 ITEM
+  name: Craft and deliver 3 ornaments
   description: GAME ENDS
   completed: 0
   active: 0
   isMain: 1
   isSide: 0
-  itemRegisterName1: ITEM
-  itemRegisterAmount1: 5
+  itemRegisterName1: ornament
+  itemRegisterAmount1: 3
   itemRegisterName2: 
   itemRegisterAmount2: 0
+  unlocksPC: 

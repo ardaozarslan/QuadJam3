@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ItemObtainCanvasManager : Singleton<ItemObtainCanvasManager>
+public class ItemObtainCanvasManager : Instanceton<ItemObtainCanvasManager>
 {
 
 	public GameObject itemObtainPrefab;
@@ -19,6 +19,7 @@ public class ItemObtainCanvasManager : Singleton<ItemObtainCanvasManager>
 
 	public void ShowItemObtain(string itemName, int itemCount, Sprite itemSprite)
 	{
+		if (itemName == "ornament") return;
 		string shownItemText = "+" + itemCount.ToString();
 		GameObject itemObtainObject = Instantiate(itemObtainPrefab, transform);
 		itemObtainObject.GetComponentInChildren<TextMeshProUGUI>().text = shownItemText;

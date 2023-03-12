@@ -461,6 +461,8 @@ MonoBehaviour:
   isAvailable: 0
   lightsAndCogsTriggered: 0
   isCompleted: 0
+  loopTriggered: 0
+  gearsMaterial: {fileID: 2100000, guid: 37d0122d5cde89740bd2d8b3432a6ad5, type: 2}
 --- !u!1 &1596388706329880979
 GameObject:
   m_ObjectHideFlags: 0
